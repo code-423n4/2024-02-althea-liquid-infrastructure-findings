@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xUche",
+  "risk": "3",
+  "title": "Transfers, Minting and Burning of tokens can still happen in the `LiquidInfrastructureERC20::_endDistribution` function which may lead to draining all the tokens for distribution by a malicious attacker/node. Even when the ````LiquidInfrastructureERC20::_endDistribution` function is called, it doesn't end the distribution of tokens because of the wrong implementation of the wrong bool value for ``\"LockedForDistribution\" in the require statement.",
+  "issueId": 12,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/12"
+}
