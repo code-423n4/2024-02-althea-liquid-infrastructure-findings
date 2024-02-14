@@ -13,3 +13,8 @@ function setThresholds(
     thresholdErc20s = newErc20s; // directly assign array
     thresholdAmounts = newAmounts; // directly assign array
     emit ThresholdsChanged(newErc20s, newAmounts); 
+```
+
+# Use `EnumerableSet` instead of array for `holders` in `LiquidInfrastructureERC20.sol`
+It is more gas efficient to check for element existence using Set instead of array. If you want to be able to still iterate over the set, then EnumerableSet is the choice. Refer to the implementation here: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol 
+
