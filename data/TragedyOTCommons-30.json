@@ -1,0 +1,11 @@
+{
+  "contest": 331,
+  "handle": "TragedyOTCommons",
+  "crew": [
+    "IllIllI"
+  ],
+  "risk": "2",
+  "title": "Burning is missing access control",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/30"
+}
