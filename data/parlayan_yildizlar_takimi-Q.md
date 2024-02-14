@@ -25,3 +25,18 @@ On function `releaseManagedNFT`, at the end there should be control to check if 
         emit ReleaseManagedNFT(nftContract, to);
     }
 ```
+
+## Missing Control On Constructor
+
+Function `withdrawFromManagedNFTs` is calling `withdrawFrom.withdrawBalancesTo` and that the function `withdrawBalancesTo` is controlling if msgSender is owner or not.  If it is not it reverts and it will end up reverting whole transaction. So If contract is not the owner of any index in `ManagedNFTs`, whole `withdrawFromManagedNFTs` function will revert. `addManagedNFT` function is controlling if we are the owner or not however on the constructor there is not any control to check if calling contract is owner of each of the given NFT in the array.
+```
+    constructor(
+        string memory _name,
+        string memory _symbol,
+        address[] memory _managedNFTs,
+        address[] memory _approvedHolders,
+        uint256 _minDistributionPeriod,
+        address[] memory _distributableErc20s
+    ) ERC20(_name, _symbol) Ownable() {
+        ManagedNFTs = _managedNFTs;
+```
