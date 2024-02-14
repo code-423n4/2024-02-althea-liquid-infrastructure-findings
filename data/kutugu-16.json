@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "kutugu",
+  "risk": "2",
+  "title": "There is a precision issue with erc20EntitlementPerUnit resulting in a possible zero token distribution",
+  "issueId": 16,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/16"
+}
