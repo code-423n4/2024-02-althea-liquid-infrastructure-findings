@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "petro_1912",
+  "risk": "3",
+  "title": "An approved holder with zero balance can be added as much as possible to `holders`, so it can be used to drain `distributableERC20s` from `LiquidInfrastructureERC20` during a revenue distribution later.  ",
+  "issueId": 17,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/17"
+}
