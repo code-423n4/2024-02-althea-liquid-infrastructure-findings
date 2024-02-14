@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "xchen1130",
+  "risk": "2",
+  "title": "\"setDistributableERC20s()\" may cause malfunction of distribution",
+  "issueId": 10,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/10"
+}
