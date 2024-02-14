@@ -1,0 +1,11 @@
+{
+  "contest": 331,
+  "handle": "TragedyOTCommons",
+  "crew": [
+    "IllIllI"
+  ],
+  "risk": "2",
+  "title": "Unsafe use of `transfer()`/`transferFrom()` with `IERC20`",
+  "issueId": 31,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/31"
+}
