@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xkaox",
+  "risk": "2",
+  "title": "an attacker could front-run a call to the distribute() function causing loss to other users",
+  "issueId": 18,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/18"
+}
