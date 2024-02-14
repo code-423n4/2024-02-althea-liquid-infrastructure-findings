@@ -8,3 +8,20 @@ require(true, "unable to find released NFT in ManagedNFTs");
 
 ## Recommendation
 Require statement can be removed.
+
+
+## Unnecessary Assignment
+The identified issue involves an unnecessary step of assigning a condition's result to a boolean variable before using it in an if-statement. This extra variable assignment is not required as the condition can be directly evaluated within the if-statement itself, making the code more concise and efficient.
+
+
+```solidity
+        bool stillHolding = (this.balanceOf(from) != 0);
+        if (!stillHolding) {
+```
+```solidity
+        bool exists = (this.balanceOf(to) != 0);
+        if (!exists) {
+```
+
+## Recommendation
+Use expression in the if statement condition directly.
