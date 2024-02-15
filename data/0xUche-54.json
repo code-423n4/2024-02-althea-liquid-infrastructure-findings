@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xUche",
+  "risk": "2",
+  "title": "Wrong implementation of Openzeppelin's Math library `min` function to return the smallest value between two values may result in compilation error and can affect distribution of tokens in the `LiquidInfrastructureERC20::distribute` function.",
+  "issueId": 54,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/54"
+}
