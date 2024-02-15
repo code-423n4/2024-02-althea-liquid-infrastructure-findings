@@ -25,3 +25,22 @@ The identified issue involves an unnecessary step of assigning a condition's res
 
 ## Recommendation
 Use expression in the if statement condition directly.
+
+# Unnecessary Control
+In the function `_endDistribution` there is one statement which checks if `LockedForDistribution` is true or not. However that control is redundant because it is not possible that variable to be `false` when it enters to the `_endDistribution`. Control for that variable is already done in the beginning of `distribute` function. So it is certain that that variable is set to true when it enters to the `_endDistribution` function.
+
+```solidity
+    function _endDistribution() internal {
+        require(
+            LockedForDistribution,
+            "cannot end distribution when not locked"
+        );
+        delete erc20EntitlementPerUnit;
+        LockedForDistribution = false;
+        LastDistribution = block.number;
+        emit DistributionFinished();
+    }
+```
+
+## Recommendation
+Consider removing the control from the function `_endDistribution`.
