@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xlemon",
+  "risk": "2",
+  "title": "NFT can be permanently lost if recipient isn't capable of receiving ERC721",
+  "issueId": 75,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/75"
+}
