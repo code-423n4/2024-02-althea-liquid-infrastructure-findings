@@ -40,3 +40,41 @@ Function `withdrawFromManagedNFTs` is calling `withdrawFrom.withdrawBalancesTo` 
     ) ERC20(_name, _symbol) Ownable() {
         ManagedNFTs = _managedNFTs;
 ```
+
+## Missing Control Causes DOS
+If `MinDistributionPeriod` variable is 0 or 1, users will be able to call function `distribute` any time and that will block owner to `mint` or other users to transfer their tokens. Everyone will be able to call only `distribute`.
+
+```python
+>>> liquidierc.MinDistributionPeriod()
+1
+>>> liquidierc.distribute(4, {'from': bob})
+Transaction sent: 0x8a69bd5ee19d2ad09d983608b6b7d8748d0098fbed3663634f7262fc4d1a7720
+  Gas price: 0.0 gwei   Gas limit: 12000000   Nonce: 0
+  LiquidInfrastructureERC20.distribute confirmed   Block: 14   Gas used: 226029 (1.88%)
+
+<Transaction '0x8a69bd5ee19d2ad09d983608b6b7d8748d0098fbed3663634f7262fc4d1a7720'>
+>>> liquidierc.mint(any_acc, 100e18, {'from': deployer})
+Transaction sent: 0x8d5b1f3c666a0218c769290cd53002ff583e1fcfecbf3f6becf9cac53373f7d7
+  Gas price: 0.0 gwei   Gas limit: 12000000   Nonce: 10
+  LiquidInfrastructureERC20.mint confirmed (must distribute before minting or burning)   Block: 15   Gas used: 34346 (0.29%)
+
+<Transaction '0x8d5b1f3c666a0218c769290cd53002ff583e1fcfecbf3f6becf9cac53373f7d7'>
+>>> liquidierc.mint(any_acc, 100e18, {'from': deployer})
+Transaction sent: 0x7cf3f9f478f834877e8b868c5602c3a97ff0d1a00916909085503034ef20839b
+  Gas price: 0.0 gwei   Gas limit: 12000000   Nonce: 11
+  LiquidInfrastructureERC20.mint confirmed (must distribute before minting or burning)   Block: 16   Gas used: 34346 (0.29%)
+
+<Transaction '0x7cf3f9f478f834877e8b868c5602c3a97ff0d1a00916909085503034ef20839b'>
+>>> liquidierc.mint(any_acc, 100e18, {'from': deployer})
+Transaction sent: 0x969652aca32e3de1b376c1394a6af1218a845a99badeeb202d31349e09740af3
+  Gas price: 0.0 gwei   Gas limit: 12000000   Nonce: 12
+  LiquidInfrastructureERC20.mint confirmed (must distribute before minting or burning)   Block: 17   Gas used: 34346 (0.29%)
+
+<Transaction '0x969652aca32e3de1b376c1394a6af1218a845a99badeeb202d31349e09740af3'>
+>>> liquidierc.distribute(4, {'from': bob})
+Transaction sent: 0xde231869470f7032fa3d3dbcf47e9cb6140b26a5ce614333090a0fd9fda27157
+  Gas price: 0.0 gwei   Gas limit: 12000000   Nonce: 1
+  LiquidInfrastructureERC20.distribute confirmed   Block: 18   Gas used: 155829 (1.30%)
+
+<Transaction '0xde231869470f7032fa3d3dbcf47e9cb6140b26a5ce614333090a0fd9fda27157'>
+```
