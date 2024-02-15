@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "dani_who_daniel",
+  "risk": "2",
+  "title": "Lack of safe transfer (LiquidInfrastructureNFT.sol line 179)",
+  "issueId": 72,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/72"
+}
