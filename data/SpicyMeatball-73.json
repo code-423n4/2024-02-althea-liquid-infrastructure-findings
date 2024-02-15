@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "SpicyMeatball",
+  "risk": "3",
+  "title": "Entitlement amount will most likely be zero if revenue token has 6 decimals",
+  "issueId": 73,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/73"
+}
