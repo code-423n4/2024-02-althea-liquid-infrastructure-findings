@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Unrestricted Token Burning in burnFromAndDistribute() & burnAndDistribute() Function",
+  "issueId": 71,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/71"
+}
