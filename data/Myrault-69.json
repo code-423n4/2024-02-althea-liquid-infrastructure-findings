@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Myrault",
+  "risk": "3",
+  "title": "The parameters _approvedHolders of the LiquidInfrastructureERC20 contract constructor are not pushed into the holders array, causing the initial allowed holders in the constructor to not be recorded by the contract.",
+  "issueId": 69,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/69"
+}
