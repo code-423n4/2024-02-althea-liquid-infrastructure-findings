@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "BowTiedOriole",
+  "risk": "3",
+  "title": "Holders array can be manipulated by transferring or burning with amount 0, stealing rewards or bricking certain functions",
+  "issueId": 77,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/77"
+}
