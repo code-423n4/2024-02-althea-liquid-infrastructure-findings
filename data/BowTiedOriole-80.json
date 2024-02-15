@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "BowTiedOriole",
+  "risk": "2",
+  "title": "Malicious user can frontrun `releaseManagedNFT` to brick withdrawals",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/80"
+}
