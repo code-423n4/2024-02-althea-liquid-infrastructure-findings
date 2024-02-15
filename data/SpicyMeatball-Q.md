@@ -138,3 +138,43 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L258-L261
 
 Since `distribute` function is the only entry point for `_beginDistribution`, and we've already checked `!LockedForDistribution`, we can discard the same check in `_beginDistribution`.
+
+### constructor doesn't check if the contract is managed NFT owner
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L459
+```solidity
+    constructor(
+        string memory _name,
+        string memory _symbol,
+>>      address[] memory _managedNFTs,
+        address[] memory _approvedHolders,
+        uint256 _minDistributionPeriod,
+        address[] memory _distributableErc20s
+    ) ERC20(_name, _symbol) Ownable() {
+        ManagedNFTs = _managedNFTs;
+        LastDistribution = block.number;
+
+        for (uint i = 0; i < _approvedHolders.length; i++) {
+            HolderAllowlist[_approvedHolders[i]] = true;
+        }
+
+        MinDistributionPeriod = _minDistributionPeriod;
+
+        distributableERC20s = _distributableErc20s;
+
+        emit Deployed();
+    }
+```
+Consider adding the same check as in `addManagedNFT`
+
+```solidity
+    function addManagedNFT(address nftContract) public onlyOwner {
+        LiquidInfrastructureNFT nft = LiquidInfrastructureNFT(nftContract);
+        address nftOwner = nft.ownerOf(nft.AccountId());
+>>      require(
+            nftOwner == address(this),
+            "this contract does not own the new ManagedNFT"
+        );
+        ManagedNFTs.push(nftContract);
+        emit AddManagedNFT(nftContract);
+    }
+```
