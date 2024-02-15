@@ -1,0 +1,2 @@
+Inefficient Loop in _afterTokenTransfer:
+In the _afterTokenTransfer function, when removing from from the list of holders, it uses a loop to find and remove the element. This approach has a time complexity of O(n), where n is the number of holders. As the number of holders increases, the gas cost of this operation also increases, potentially leading to high gas fees. Consider using a mapping or a more efficient data structure to track the list of holders.
