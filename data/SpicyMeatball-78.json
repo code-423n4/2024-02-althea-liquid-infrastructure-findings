@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "SpicyMeatball",
+  "risk": "2",
+  "title": "withdrawFromManagedNFTs may not fully withdraw balances from all managed NFTs",
+  "issueId": 78,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/78"
+}
