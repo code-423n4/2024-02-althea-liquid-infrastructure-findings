@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Inadequate Element Removal Handling in _afterTokenTransfer() Function",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/88"
+}
