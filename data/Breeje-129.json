@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Breeje",
+  "risk": "3",
+  "title": "An attack vector allows unbounded `holders` leading to multiple DoS related issues including blocking of distribution",
+  "issueId": 129,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/129"
+}
