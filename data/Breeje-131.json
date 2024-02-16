@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Breeje",
+  "risk": "2",
+  "title": "`erc20EntitlementPerUnit` doesn't account for different decimal Tokens",
+  "issueId": 131,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/131"
+}
