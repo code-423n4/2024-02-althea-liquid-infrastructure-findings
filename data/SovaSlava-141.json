@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "SovaSlava",
+  "risk": "3",
+  "title": "When owner burn user's shares, 0x0 address will be added in holders array",
+  "issueId": 141,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/141"
+}
