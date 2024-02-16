@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nuthan2x",
+  "risk": "2",
+  "title": "Transfer of tokens might not be possible duse to Out of gas reverts when holders array is huge",
+  "issueId": 102,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/102"
+}
