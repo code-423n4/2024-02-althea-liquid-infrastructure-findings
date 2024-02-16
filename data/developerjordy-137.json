@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "developerjordy",
+  "risk": "3",
+  "title": "Potential DOS because of wrong modifier in `setThresholds` ",
+  "issueId": 137,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/137"
+}
