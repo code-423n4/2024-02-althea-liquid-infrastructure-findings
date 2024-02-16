@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "PoeAudits",
+  "risk": "3",
+  "title": "Tokens Locked due to Decimal Difference in _beginDistribution Function",
+  "issueId": 91,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/91"
+}
