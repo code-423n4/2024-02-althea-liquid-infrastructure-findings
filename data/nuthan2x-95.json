@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nuthan2x",
+  "risk": "3",
+  "title": "  Holders receive zero tokens when distributed, due to precision loss when computing `erc20EntitlementPerUnit`",
+  "issueId": 95,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/95"
+}
