@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "turvy_fuzz",
+  "risk": "3",
+  "title": "Unsafe use of transfer() with IERC20 which was not Identified by bots will cause all holders distribution for that token to be unretrievable",
+  "issueId": 100,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/100"
+}
