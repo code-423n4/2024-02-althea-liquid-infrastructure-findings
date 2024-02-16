@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nuthan2x",
+  "risk": "3",
+  "title": " Distribution can be bricked, and double claims by a few holders are possible when owner calls `LiquidInfrastructureERC20::setDistributableERC20s`",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/87"
+}
