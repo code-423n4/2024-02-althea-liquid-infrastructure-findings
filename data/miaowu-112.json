@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "miaowu",
+  "risk": "3",
+  "title": "The _approvedHolders entered in the LiquidInfrastructureERC20 contract constructor are not recorded in the Holders array, resulting in the _approvedHolders entered when creating the contract unable to receive the rewards distributed by distribute.",
+  "issueId": 112,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/112"
+}
