@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Fassi_Security",
+  "risk": "3",
+  "title": "Flaw in reward distribution results in approved holders losing rewards",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/115"
+}
