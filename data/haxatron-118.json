@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "User cannot transfer / burn their full ERC20 balance due to large holder array",
+  "issueId": 118,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/118"
+}
