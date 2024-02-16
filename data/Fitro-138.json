@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Fitro",
+  "risk": "3",
+  "title": "LiquidInfrastructureERC20.sol :: distribute() If the hold token deciamals > reward token decimals,  the distribution will result in 0 tokens being distributed, effectively blocking them forever in the contract.",
+  "issueId": 138,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/138"
+}
