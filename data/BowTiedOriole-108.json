@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "BowTiedOriole",
+  "risk": "3",
+  "title": "Lack of `safeTransfer` can cause `distribute()` to be bricked or lock funds in `LiquidInfrastructureNFT`",
+  "issueId": 108,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/108"
+}
