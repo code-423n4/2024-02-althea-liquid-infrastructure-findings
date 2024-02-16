@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "ERC20 tokens should be distributed before removing them from `LiquidInfrastructureERC20`",
+  "issueId": 111,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/111"
+}
