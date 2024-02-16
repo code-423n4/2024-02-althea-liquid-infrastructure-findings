@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "atoko",
+  "risk": "2",
+  "title": "Protocol does not handle fee on transfer tokens",
+  "issueId": 124,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/124"
+}
