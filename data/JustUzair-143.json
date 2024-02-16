@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "JustUzair",
+  "risk": "3",
+  "title": "Denail Of Service of `LiquidInfrastructureERC20::transfer()` function, due to addition of a large number of holder positions",
+  "issueId": 143,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/143"
+}
