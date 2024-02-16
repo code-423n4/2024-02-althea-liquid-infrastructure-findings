@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nzlatev7",
+  "risk": "2",
+  "title": "As protocol relies heavily on admin actions, single-step ownership transfer pattern is dangerous",
+  "issueId": 135,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/135"
+}
