@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "BowTiedOriole",
+  "risk": "2",
+  "title": "Unapproved holders are still calculated into `EntitlementPerUnit`, reducing rewards for approved holders",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/117"
+}
