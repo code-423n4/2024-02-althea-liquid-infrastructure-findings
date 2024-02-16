@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "`setDistributableERC20s()` should check there is no ongoing distribution to prevent bricking the contract",
+  "issueId": 110,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/110"
+}
