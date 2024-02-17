@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Krace",
+  "risk": "2",
+  "title": "`releaseManagedNFT` has the capability to remove ManagedNFTs even if the process of `withdrawFromManagedNFTs` is not completed",
+  "issueId": 167,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/167"
+}
