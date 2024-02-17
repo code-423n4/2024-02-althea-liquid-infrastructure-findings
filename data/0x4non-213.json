@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0x4non",
+  "risk": "2",
+  "title": "Attacker could artificially inflate balance before Distribution using a flash loan",
+  "issueId": 213,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/213"
+}
