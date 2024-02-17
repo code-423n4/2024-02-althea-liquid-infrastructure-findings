@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Fassi_Security",
+  "risk": "2",
+  "title": "Zero address can be added to the holders arrays, breaking one of the invariants",
+  "issueId": 162,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/162"
+}
