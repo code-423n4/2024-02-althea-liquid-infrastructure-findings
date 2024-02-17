@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "web3pwn",
+  "risk": "2",
+  "title": "The managed NFT list can be modified during withdrawal process leading to Denial of Service",
+  "issueId": 230,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/230"
+}
