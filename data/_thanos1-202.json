@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "_thanos1",
+  "risk": "3",
+  "title": "Array Data Corruption Vulnerability",
+  "issueId": 202,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/202"
+}
