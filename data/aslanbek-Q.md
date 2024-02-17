@@ -1,9 +1,13 @@
-# L-01 Zero-transfer adds the recipient to the holders list
+# L-01 Zero-transfer still adds the recipient to the holders list
 
-If the account who transfers the token has no balance, they are removed from the holders list. However, there's a transfer of 0 tokens, the recipient will be added to the list of holders.
- 
-# L-02 mintAndDistribute/burnAndDistribute/burnFromAndDistribute can not be used for distribution
+`_beforeTokenTransfer` and `_afterTokenTransfer` have the following discrepancy:
 
+1. In `_afterTokenTransfer` if the sender has no balance, they are removed from the holders list.
+
+2. However, if there's a transfer of 0 tokens and the recipient has 0 tokens, in `_beforeTokenTransfer` the recipient will still be added to the list of holders.
+
+Consider adding a check for zero-transfer to 
+# L-02 `mintAndDistribute`, `burnAndDistribute` and `burnFromAndDistribute` can not be used for distribution
 
 ```solidity
     function mintAndDistribute(
@@ -25,11 +29,13 @@ distributeToAllHolders() can be called only if `_isPastMinDistributionPeriod() =
         );
     }
 ```
-Essentially, mintAndDistribute can not be used to distribute, and can only be used as `mint()`. For burnAndDistribute/burnFromAndDistribute, it is exactly the same: they can only be used to burn tokens. 
 
-The functions should either be removed (as they dont add any functionality on top of mint/burn), or refactored 
+Essentially, `mintAndDistribute` can not be used to `distribute`, and can only be used as `mint()`. For `burnAndDistribute`/`burnFromAndDistribute`, it is exactly the same: they can only be used to burn tokens. 
 
-# L-03 Due to incorrect require statement, releaseManagedNFT will not revert if the NFT is not present 
+These three functions should be removed, as they don't add any functionality on top of mint/burn.
+
+# L-03 Due to incorrect `require` statement, releaseManagedNFT will not revert if the NFT is not present 
+
 releaseManagedNFT is supposed to transfer the specified NFT from the contract to the specified address, and revert if the NFT is not in the list of ManagedNFTs. However, the require statement is incorrect, and the function will still be executed successfully regardless.
 
 ## Recommended Mitigation Steps
@@ -50,8 +56,6 @@ releaseManagedNFT is supposed to transfer the specified NFT from the contract to
 +       require(i < ManagedNFTs.length + 1, "unable to find released NFT in ManagedNFTs");
 ```
 
-
 # L-04 
-setDistributableERC20s should be disabled is there's an ongoing distribution
+`setDistributableERC20s` should be disabled is there's an ongoing distribution.
 
-# L - 05
