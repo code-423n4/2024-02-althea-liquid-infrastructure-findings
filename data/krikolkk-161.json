@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "krikolkk",
+  "risk": "2",
+  "title": "Tokens with blacklist functionality can DoS the system",
+  "issueId": 161,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/161"
+}
