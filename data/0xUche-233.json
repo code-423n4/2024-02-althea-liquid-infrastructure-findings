@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xUche",
+  "risk": "2",
+  "title": "An approved sender who is a malicious can override the `LiquidInfrastructureNFT.sol::withdrawalBalances` function and change the destination address, which can result to loss in funds.",
+  "issueId": 233,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/233"
+}
