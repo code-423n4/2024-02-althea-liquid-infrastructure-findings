@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "web3pwn",
+  "risk": "3",
+  "title": "New users steal rewards earned by the previous users",
+  "issueId": 228,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/228"
+}
