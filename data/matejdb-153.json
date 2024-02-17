@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "matejdb",
+  "risk": "3",
+  "title": "User can steal rewards by adding himself multiple times into the holders array",
+  "issueId": 153,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/153"
+}
