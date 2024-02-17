@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "d3e4",
+  "risk": "2",
+  "title": "`distributableERC20s` can be modified during distribution",
+  "issueId": 151,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/151"
+}
