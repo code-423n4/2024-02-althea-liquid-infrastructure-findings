@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Meera",
+  "risk": "3",
+  "title": "withdrawFromManagedNFTs can be DOSd due to calling withdrawBalancesTo on a leftover nftContract",
+  "issueId": 149,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/149"
+}
