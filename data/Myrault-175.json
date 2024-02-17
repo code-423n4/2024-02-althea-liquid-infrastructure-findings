@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Myrault",
+  "risk": "3",
+  "title": "Any user can cause the distribute function in the LiquidInfrastructureERC20.sol contract to become unusable, making the contract no longer able to distribute rewards.",
+  "issueId": 175,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/175"
+}
