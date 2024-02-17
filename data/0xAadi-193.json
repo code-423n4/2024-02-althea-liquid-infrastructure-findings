@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xAadi",
+  "risk": "3",
+  "title": "Erroneous Addition of Zero Address to Holder Array on Every Token Burn Transaction Cause Gas Griefing or DOS",
+  "issueId": 193,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/193"
+}
