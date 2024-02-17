@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "miaowu",
+  "risk": "3",
+  "title": "Any user can cause DOS by transferring to users in the _approvedHolders array, making the contract unable to distribute rewards",
+  "issueId": 180,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/180"
+}
