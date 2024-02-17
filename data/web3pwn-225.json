@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "web3pwn",
+  "risk": "3",
+  "title": "Attacker can launch denial of service attack that will block reward distribution",
+  "issueId": 225,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/225"
+}
