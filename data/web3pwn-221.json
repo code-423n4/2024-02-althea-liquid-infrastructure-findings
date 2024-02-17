@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "web3pwn",
+  "risk": "2",
+  "title": "Function recoverAccount cannot be called",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/221"
+}
