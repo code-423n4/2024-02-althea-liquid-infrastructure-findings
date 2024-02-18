@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Bigsam",
+  "risk": "2",
+  "title": "Consider adding a require check to ensure that  holders.length is always greater than 0 in the distribute function",
+  "issueId": 335,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/335"
+}
