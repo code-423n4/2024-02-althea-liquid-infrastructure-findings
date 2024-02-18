@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "gesha17",
+  "risk": "3",
+  "title": "Size of holders array can artificially inflated, causing the ERC20 transfer functionality to run out of gas by hitting the block gas limit.",
+  "issueId": 307,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/307"
+}
