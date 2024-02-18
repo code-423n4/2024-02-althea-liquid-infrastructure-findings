@@ -10,9 +10,15 @@ Address(0) will be treated as valid recipient and have tokens transferred to it
 
 The zero address is able to be whitelisted and receive token distributions, even though it does not represent a real holder. This locks sent tokens forever.
 
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L198
+
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L106
+
 Recommendation:
 
 In approveHolder(), add require(holder != address(0)) to prevent approving zero address
+
+
 
 
 2.  Burning 0 Tokens Allowed
@@ -21,14 +27,17 @@ The burnAndDistribute() function allows calling burn() with an amount of 0.
 The burn() function also lacks a require check that amount > 0.
 
 So burning 0 tokens is not prevented or disallowed.
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L331
 
 Recommendation:
 
 In burnAndDistribute(), add: require(amount > 0, "Cannot burn 0 tokens").
 
+
 3. Distribution Event Emitted Incorrectly
 
 The Distribution event is emitted outside the distribution loop and does not iterate over each receipt. This causes it to only emit the receipts for the last distribution recipient.
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L229
 
 Reproduction:
 
