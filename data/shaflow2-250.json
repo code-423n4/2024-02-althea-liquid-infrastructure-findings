@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "shaflow2",
+  "risk": "3",
+  "title": "Due to the unrestricted zero amount transfer, the same address might be repeatedly added to the holders array.  ",
+  "issueId": 250,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/250"
+}
