@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "TheSavageTeddy",
+  "risk": "3",
+  "title": "ERC20 tokens that do not return a `bool` such as USDT can be permanently locked",
+  "issueId": 257,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/257"
+}
