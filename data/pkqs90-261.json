@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "pkqs90",
+  "risk": "3",
+  "title": "Reward distribution may be incorrect for ERC20s with non-18 decimals",
+  "issueId": 261,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/261"
+}
