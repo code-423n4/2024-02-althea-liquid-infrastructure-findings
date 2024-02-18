@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xwhisperingwoods",
+  "risk": "3",
+  "title": "Token reverts on large transfers and reentrancy in `withdrawBalances` and `_withdrawBalancesTo` can cause draining of contract. ",
+  "issueId": 314,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/314"
+}
