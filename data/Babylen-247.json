@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Babylen",
+  "risk": "3",
+  "title": "transfering 0 LiquidInfrastructureERC20 tokens to an approvedHolder with a 0 balance will add them to a holders list, allowing for duplicate entries",
+  "issueId": 247,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/247"
+}
