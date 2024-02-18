@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Bigsam",
+  "risk": "2",
+  "title": "Entitlement will emit a value of zero for most of the ERC20 amount because balance of a token will always be less or sometimes equal to the total supply of all the token",
+  "issueId": 357,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/357"
+}
