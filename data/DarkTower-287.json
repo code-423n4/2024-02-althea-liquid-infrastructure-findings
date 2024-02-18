@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "DarkTower",
+  "risk": "3",
+  "title": "Attacker can gradually inflate holders array with 0 value holders to DoS the protocol",
+  "issueId": 287,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/287"
+}
