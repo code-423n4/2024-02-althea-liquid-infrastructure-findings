@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xHelium",
+  "risk": "2",
+  "title": "Malicious user could borrow a flash loan ( DAI ) and manipulate the contract to send him more tokens than his entitlement",
+  "issueId": 267,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/267"
+}
