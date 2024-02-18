@@ -57,5 +57,24 @@ These three functions should be removed, as they don't add any functionality on 
 +       require(i < ManagedNFTs.length + 1, "unable to find released NFT in ManagedNFTs");
 ```
 
-# L-04 `setDistributableERC20s` should be disabled is there's an ongoing distribution.
+# L-04 `setDistributableERC20s` should be disabled if there's an ongoing distribution
+[LiquidInfrastructureERC20.sol#L441-L445](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L441-L445)
+```solidity
+    function setDistributableERC20s(
+        address[] memory _distributableERC20s
+    ) public onlyOwner {
+        distributableERC20s = _distributableERC20s;
+    }
+```
+Changes in `distributableERC20s` during a distribution may brick the current and all future distributions, and transfers as a consequence.
 
+## Recommendation
+
+```diff
+    function setDistributableERC20s(
+        address[] memory _distributableERC20s
+    ) public onlyOwner {
++       require(!LockedForDistribution, "distribution in progress");
+        distributableERC20s = _distributableERC20s;
+    }
+```
