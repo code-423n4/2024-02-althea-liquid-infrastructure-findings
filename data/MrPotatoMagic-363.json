@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Approved holder loses all revenue if their address is blacklisted for one of the distributable ERC20s",
+  "issueId": 363,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/363"
+}
