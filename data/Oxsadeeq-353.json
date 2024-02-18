@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Oxsadeeq",
+  "risk": "2",
+  "title": "Releasing ManagedNFT's during partial withdrawals would lead to skipped withdrawals of the ManagedNFT's last index when it's finally called  ",
+  "issueId": 353,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/353"
+}
