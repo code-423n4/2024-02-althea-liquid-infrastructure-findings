@@ -6,7 +6,8 @@
 
 2. However, if there's a transfer of 0 tokens and the recipient has 0 tokens, in `_beforeTokenTransfer` the recipient will still be added to the list of holders.
 
-Consider adding a check for zero-transfer to 
+Consider adding a check for zero-transfer, so the recipient of zero-transfer will not be added to the list of holders.
+
 # L-02 `mintAndDistribute`, `burnAndDistribute` and `burnFromAndDistribute` can not be used for distribution
 
 ```solidity
@@ -34,9 +35,9 @@ Essentially, `mintAndDistribute` can not be used to `distribute`, and can only b
 
 These three functions should be removed, as they don't add any functionality on top of mint/burn.
 
-# L-03 Due to incorrect `require` statement, releaseManagedNFT will not revert if the NFT is not present 
+# L-03 Due to incorrect `require` statement, `releaseManagedNFT` will not revert if the NFT is not present 
 
-releaseManagedNFT is supposed to transfer the specified NFT from the contract to the specified address, and revert if the NFT is not in the list of ManagedNFTs. However, the require statement is incorrect, and the function will still be executed successfully regardless.
+`releaseManagedNFT` is supposed to transfer the specified NFT from the contract to the specified address, and revert if the NFT is not in the list of ManagedNFTs. However, the require statement is incorrect, and the function will still be executed successfully regardless.
 
 ## Recommended Mitigation Steps
 ```diff
