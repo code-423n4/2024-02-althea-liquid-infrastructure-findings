@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xhunter",
+  "risk": "2",
+  "title": "lack of check for minimum balance per holder's address ",
+  "issueId": 332,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/332"
+}
