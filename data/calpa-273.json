@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "calpa",
+  "risk": "2",
+  "title": "Use `ERC721::_safeMint()` instead of `_mint()`",
+  "issueId": 273,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/273"
+}
