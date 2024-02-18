@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "d3e4",
+  "risk": "3",
+  "title": "Repeated transfers of zero amount to no-balance holder adds duplicates to `holders`",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/240"
+}
