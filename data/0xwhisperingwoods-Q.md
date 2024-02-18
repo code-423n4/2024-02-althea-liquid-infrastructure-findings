@@ -36,3 +36,12 @@
       // internal & private view & pure functions
       // external & public view & pure functions
 ```
+
+**[I-2]:** Consider renaming `LiquidInfrastructureERC20::withdrawFromAllManagedNFTs` function 
+
+**Description:** The function has an almost similar naming to the `LiquidInfrastructureERC20::withdrawFromManagedNFTs`
+
+**Impact:** Can cause confusion and reading difficulties
+
+**Recommended Mitigation:** Consider renaming
+
