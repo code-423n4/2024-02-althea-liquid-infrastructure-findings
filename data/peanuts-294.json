@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "Low decimal tokens will truncate to zero when calculating entitlement rewards.",
+  "issueId": 294,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/294"
+}
