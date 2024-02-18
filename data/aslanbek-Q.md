@@ -57,6 +57,5 @@ These three functions should be removed, as they don't add any functionality on 
 +       require(i < ManagedNFTs.length + 1, "unable to find released NFT in ManagedNFTs");
 ```
 
-# L-04 
-`setDistributableERC20s` should be disabled is there's an ongoing distribution.
+# L-04 `setDistributableERC20s` should be disabled is there's an ongoing distribution.
 
