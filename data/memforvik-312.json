@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "memforvik",
+  "risk": "3",
+  "title": "The implementation of some ERC20 stablecoins (such as USDT) does not fully comply with the ERC20 standard implementation. LiquidInfrastructureNFT directly uses the return value as a judgment condition in `_withdrawBalancesTo` function, it may cause the transfer to revert.",
+  "issueId": 312,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/312"
+}
