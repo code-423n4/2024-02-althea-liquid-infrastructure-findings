@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "turvy_fuzz",
+  "risk": "3",
+  "title": "Anybody can break the protocol due to the way the holders array and 'from' address is handled in _beforeTokenTransfer",
+  "issueId": 285,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/285"
+}
