@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Krayt",
+  "risk": "3",
+  "title": "Unbound array in a for loop in LiquidInfrastructureERC20::releaseManagedNFT is a potential denial of service, incrementing gas costs the more managed NFTs there are and potentially locking them.",
+  "issueId": 277,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/277"
+}
