@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nocoder",
+  "risk": "2",
+  "title": "Because there is no minimum holding period and stepwise distribution, people can use a flash loan to front run distribute() and hold LiquidInfrastructureERC20 for only one block, capturing a disproportionate amount of the distribution",
+  "issueId": 313,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/313"
+}
