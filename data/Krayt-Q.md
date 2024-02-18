@@ -10,3 +10,14 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee471
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L271
 
 **Recommended Mitigation:** Add variables to restrain the maxSize of the distribution and allow it to be made over multiple blocks.
+
+### [L-2] Unbound array in a for loop in `LiquidInfrastructureERC20::constructor` could result in failing the contract deployement.
+
+**Description:** The `LiquidInfrastructureERC20::constructor` function loops through the `_approvedHolders` array to add them to the `HolderAllowlist` array. If the array given in parameters is too big it could prevent the deployement of the contract.
+
+**Impact:** Contract couldnt deploy.
+
+**Proof of Concept:**
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L467
+
+**Recommended Mitigation:** Dont approve a big amount of holders at first, and/or add them after deployement by using the `approveHolder` function.
