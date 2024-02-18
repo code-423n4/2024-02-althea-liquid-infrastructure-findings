@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "lsaudit",
+  "risk": "2",
+  "title": "Function `setThresholds()` may broke down - thus it won't be possible to call it ever again",
+  "issueId": 309,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/309"
+}
