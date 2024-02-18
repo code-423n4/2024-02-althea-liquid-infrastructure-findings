@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xHelium",
+  "risk": "2",
+  "title": "Entitlement calculation in  _begindistribution can round down to zero",
+  "issueId": 276,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/276"
+}
