@@ -66,7 +66,7 @@ These three functions should be removed, as they don't add any functionality on 
         distributableERC20s = _distributableERC20s;
     }
 ```
-Changes in `distributableERC20s` during a distribution may brick the current and all future distributions, and transfers as a consequence.
+Changes in `distributableERC20s` during a distribution may brick the current and all future distributions, and also brick transfers as a consequence.
 
 ## Recommendation
 
