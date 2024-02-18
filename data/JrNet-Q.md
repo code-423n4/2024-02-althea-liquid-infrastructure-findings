@@ -5,6 +5,8 @@ Function `distribute` is used to pay out rewards in LiquidInfrastructureERC20 co
 
 If one user becomes blacklisted for a token (eg USDC), `distribute()` never gets executed as the step `toDistribute.transfer(recipient, entitlement)` reverts
 
+[LiquidInfrastructureERC20.sol#L220-L227](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L220-L227)
+
 ```solidity
   function distribute(uint256 numDistributions) public nonReentrant {
         // ...
