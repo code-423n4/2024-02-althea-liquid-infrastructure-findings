@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Matin",
+  "risk": "3",
+  "title": "Missing duplicate ERC20 tokens inside the (distributableERC20s) variable may lead to double charge the system",
+  "issueId": 358,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/358"
+}
