@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Attacker can inflate holders array by 0 value burn() calls to DOS protocol functionality",
+  "issueId": 339,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/339"
+}
