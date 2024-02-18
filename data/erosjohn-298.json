@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "LiquidInfrastructureERC20.sol#_beginDistribution decimals of tokens are not considered when calculating entitlement",
+  "issueId": 298,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/298"
+}
