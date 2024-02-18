@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Honour",
+  "risk": "3",
+  "title": "`LiquidInfrastructureERC20::burn` pushes address(0) to the holders array",
+  "issueId": 320,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/320"
+}
