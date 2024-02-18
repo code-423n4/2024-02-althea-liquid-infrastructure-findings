@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "pipidu83",
+  "risk": "3",
+  "title": "A Managed NFT can be added more than once, potentially breaking protocol economics",
+  "issueId": 275,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/275"
+}
