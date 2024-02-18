@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "LiquidInfrastructureERC20.sol#distribute Non-standard tokens such as USDT are not considered, which may cause distribute rewards to fail",
+  "issueId": 270,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/270"
+}
