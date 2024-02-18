@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "mitko1111",
+  "risk": "2",
+  "title": "If an NFT is not found to be removed, an exception will not be thrown as expected",
+  "issueId": 258,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/258"
+}
