@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "CodeWasp",
+  "risk": "2",
+  "title": "If the owner adds a managed NFT twice, reward distribution is blocked, and the NFT cannot be removed",
+  "issueId": 543,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/543"
+}
