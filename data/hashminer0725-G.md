@@ -15,3 +15,7 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
 ## 4. `nextWithdrawal` could be replaced with `i`.
 It's more cheap to use a local variable for the same value.
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L382
+
+## 5. It's more cheap to delete the variable than updating its value to 0.
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L279
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L383
