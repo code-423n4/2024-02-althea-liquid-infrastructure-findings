@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "kinda_very_good",
+  "risk": "3",
+  "title": "Non standard ERC20 eg USDT,USDC revenue tokens get rounded to zero ",
+  "issueId": 462,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/462"
+}
