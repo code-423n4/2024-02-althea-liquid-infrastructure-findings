@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "mazi_xyz",
+  "risk": "3",
+  "title": "Natspec mentions that the function allows only approved sender to perform operation but it has no access control implementation",
+  "issueId": 691,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/691"
+}
