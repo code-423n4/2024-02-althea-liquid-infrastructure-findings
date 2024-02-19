@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "iberry",
+  "risk": "2",
+  "title": "The reduction of holders.length within the distribute() function of LiquidInfrastructureERC20 prevents _endDistribution() from being called",
+  "issueId": 590,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/590"
+}
