@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSecuri",
+  "risk": "3",
+  "title": "DoS: Blacklisted holder may prevent distribute()",
+  "issueId": 616,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/616"
+}
