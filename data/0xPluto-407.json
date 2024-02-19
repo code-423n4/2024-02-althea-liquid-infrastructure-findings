@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xPluto",
+  "risk": "3",
+  "title": "Potential DoS Attack caused by large holders' array in LiquidInfrustractureERC20.sol",
+  "issueId": 407,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/407"
+}
