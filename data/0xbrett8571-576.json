@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xbrett8571",
+  "risk": "2",
+  "title": "Unchecked threshold arrays can disrupt critical contract functionality, risking funds.",
+  "issueId": 576,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/576"
+}
