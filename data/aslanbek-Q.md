@@ -37,7 +37,9 @@ These three functions should be removed, as they don't add any functionality on 
 
 # L-03 Due to incorrect `require` statement, `releaseManagedNFT` will not revert if the NFT is not present 
 
-`releaseManagedNFT` is supposed to transfer the specified NFT from the contract to the specified address, and revert if the NFT is not in the list of ManagedNFTs. However, the require statement is incorrect, and the function will still be executed successfully regardless.
+[LiquidInfrastructureERC20.sol#L431](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L431)
+
+`releaseManagedNFT` is supposed to transfer the specified NFT from the contract to the specified address, and revert if the NFT is not in the list of ManagedNFTs. However, the require statement is incorrect, and the function will still be executed successfully regardless, and will emit `ReleaseManagedNFT` event.
 
 ## Recommended Mitigation Steps
 ```diff
@@ -55,26 +57,4 @@ These three functions should be removed, as they don't add any functionality on 
         // By this point the NFT should have been found and removed from ManagedNFTs
 -       require(true, "unable to find released NFT in ManagedNFTs");
 +       require(i < ManagedNFTs.length + 1, "unable to find released NFT in ManagedNFTs");
-```
-
-# L-04 `setDistributableERC20s` should be disabled if there's an ongoing distribution
-[LiquidInfrastructureERC20.sol#L441-L445](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L441-L445)
-```solidity
-    function setDistributableERC20s(
-        address[] memory _distributableERC20s
-    ) public onlyOwner {
-        distributableERC20s = _distributableERC20s;
-    }
-```
-Changes in `distributableERC20s` during a distribution may brick the current and all future distributions, and also brick transfers as a consequence.
-
-## Recommendation
-
-```diff
-    function setDistributableERC20s(
-        address[] memory _distributableERC20s
-    ) public onlyOwner {
-+       require(!LockedForDistribution, "distribution in progress");
-        distributableERC20s = _distributableERC20s;
-    }
 ```
