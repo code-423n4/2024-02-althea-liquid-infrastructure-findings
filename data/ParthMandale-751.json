@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "ParthMandale",
+  "risk": "2",
+  "title": "LiquidInfrastructureERC20:_afterTokenTransfer , This bug causes the loss of the original element at the last position of the array and duplicates the element at index i at the end before removing it, resulting in unintended data loss and duplication.",
+  "issueId": 751,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/751"
+}
