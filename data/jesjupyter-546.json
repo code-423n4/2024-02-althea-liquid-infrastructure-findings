@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "jesjupyter",
+  "risk": "3",
+  "title": "If the LiquidInfrastructureERC20 has 0 token to distribute, transfer may revert",
+  "issueId": 546,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/546"
+}
