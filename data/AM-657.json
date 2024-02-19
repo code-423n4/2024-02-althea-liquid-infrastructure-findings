@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "AM",
+  "risk": "2",
+  "title": "MintingAndDistribution function can create monetary loss for new tokens holder",
+  "issueId": 657,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/657"
+}
