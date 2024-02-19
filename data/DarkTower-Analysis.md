@@ -54,15 +54,15 @@ There are two centralization points in the protocol:
 
 ## 5. Diagrams
 
-![Entry point]()
+![Entry point](https://rexjoseph.github.io/images/althea-entry.png)
 
 ### Some interesting call path diagrams for the users
 
 With just 3 contracts in scope, the call traces of the codebase are relatively simple to understand.
 
-![Full overview]()
+![Call graph](https://rexjoseph.github.io/images/althea-call-graph.png)
 
-[Link to full diagram]()
+[Link to full diagrams](https://github.com/rexjoseph/images)
 
 
 ## 7. Some weak spots within the codebase and mitigations
