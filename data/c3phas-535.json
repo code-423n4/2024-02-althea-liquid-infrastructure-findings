@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "c3phas",
+  "risk": "2",
+  "title": "Use of `delete` might lead to an OOG error if the array is too big",
+  "issueId": 535,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/535"
+}
