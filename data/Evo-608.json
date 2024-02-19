@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Evo",
+  "risk": "2",
+  "title": "releaseManagedNFT will transfer NFT token and avoid checking ManagedNFTs address",
+  "issueId": 608,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/608"
+}
