@@ -81,5 +81,7 @@ This contract extends the functionality of an `ERC721` token by adding two acces
 - Read the known issues and attack ideas in the README.
 - Some vulnerabilities were found and described in reports.
 
+
+
 ### Time spent:
-15 hours
+20 hours
