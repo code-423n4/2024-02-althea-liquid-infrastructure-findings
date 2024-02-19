@@ -5,7 +5,7 @@
 ### Summary
 | List |Head |Details|
 |:--|:----------------|:------|
-|a) |Overview of the Opus Project| Summary of the whole Protocol |
+|a) |Overview of the Althea Project| Summary of the whole Protocol |
 |b) |Technical Architecture| Architecture of the smart contracts |
 |c) |The approach I would follow when reviewing the code | Stages in my code review and analysis |
 |d) |Analysis of the code base | What is unique? How are the existing patterns used? "Solidity-metrics" was used  |
@@ -22,7 +22,7 @@
 
 
 
-## a) Overview of the Opus Project
+## a) Overview of the Althea Project
 
 The Althea Liquid Infrastructure project represents a groundbreaking initiative within the blockchain space, aiming to bridge the gap between real-world infrastructure assets and digital finance. By leveraging the power of blockchain technology, specifically through the use of Non-Fungible Tokens (NFTs) and a bespoke ERC20 token, the project introduces a novel approach to tokenizing, managing, and monetizing infrastructure assets in a decentralized manner.
 
@@ -73,11 +73,9 @@ Given the detailed examination of the Althea Liquid Infrastructure project's sma
 <br/>
 
 
-### Domain Model of the Protocol
+### State Model of the Protocol
 
-
-
-[![Screenshot-from-2024-02-06-23-27-58.png](https://i.postimg.cc/fRL9f9QN/Screenshot-from-2024-02-06-23-27-58.png)](https://postimg.cc/2Vsyz35c)
+[![Screenshot-from-2024-02-19-22-31-52.png](https://i.postimg.cc/T32L2vD0/Screenshot-from-2024-02-19-22-31-52.png)](https://postimg.cc/WhKbSKSq)
 
 <br/>
 
@@ -85,7 +83,7 @@ Given the detailed examination of the Althea Liquid Infrastructure project's sma
 ## c) The approach I would follow when reviewing the code
 
 First, by examining the scope of the code, I determined my code review and analysis strategy.
-https://code4rena.com/audits/2024-01-opus#top
+https://code4rena.com/audits/2024-02-althea-liquid-infrastructure#top
 
 Accordingly, I would analyze and audit the subject in the following steps;
 
@@ -258,14 +256,11 @@ Overall, I consider the quality of the Althea protocol codebase to be Good. The 
 | **Security Practices**                     | Security is a strong focus, with the use of allowlists for compliance, checks-effects-interactions patterns to prevent reentrancy attacks, and visibility specifiers to control access to functions. However, a formal security audit report would further validate these practices.        |
 | **Testing and Coverage**                   | The project exhibits an impressive commitment to quality and reliability, with test coverage around 95%. This high level of testing, encompassing unit and integration tests, signifies a robust approach to ensuring the functionality and security of the smart contracts against a wide array of potential issues. Such comprehensive testing is indicative of a mature development process and significantly contributes to the project's overall codebase quality.                               |
 | **Upgradeability and Maintenance**         | The project does not explicitly implement upgradeability patterns (e.g., proxy contracts), which might impact long-term maintainability. Considering an upgrade path or versioning strategy could enhance the project's flexibility in addressing future requirements.                  |
-| **Performance and Gas Optimization**       | The code demonstrates an awareness of gas optimization in some areas, such as using mappings for efficient data storage. However, the iterative nature of functions like `distribute` could be optimized for gas efficiency and scalability.                                      |
-| **Compliance and Regulatory Considerations** | The inclusion of an allowlist mechanism demonstrates a proactive approach to regulatory compliance, particularly for KYC and AML standards. Ongoing updates to comply with regulations as they evolve will be essential for the project's sustainability.                            |
-| **Community and Ecosystem Integration**    | The project is designed to integrate well within the broader Ethereum and Cosmos ecosystems, leveraging ERC20 and ERC721 standards. Further community engagement and partnerships could enhance its ecosystem presence and adoption.                                            |
-
+| **Performance and Gas Optimization**       | The code demonstrates an awareness of gas optimization in some areas, such as using mappings for efficient data storage. However, the iterative nature of functions like `distribute` could be optimized for gas efficiency and scalability. 
 ## i) Other Audit Reports and Automated Findings 
 
 **Previous Audits**
-Although the security Report of previous Audit isn't public but we can see it the docs that the `opus_contracts` already went an audit
+I've searched the docs and overview on code4rena but couldn't find any previous audit
 
 **[Known issues and risks](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/bot-report.md)**
 **[4naly3er Report](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/4naly3er-report.md)**
@@ -296,7 +291,6 @@ If a distribution has not happened in at least `MinDistributionPeriod` blocks th
   - Supports minting and burning of tokens, particularly in relation to managing the supply in response to investment and revenue distribution activities.
  
  ### High level UML diagram
- <br/>
  [![Screenshot-from-2024-02-19-19-28-42.png](https://i.postimg.cc/523qnLTj/Screenshot-from-2024-02-19-19-28-42.png)](https://postimg.cc/SnnMK2yp)
 
 ### `LiquidInfrastructureNFT.sol`
@@ -314,7 +308,6 @@ If a distribution has not happened in at least `MinDistributionPeriod` blocks th
   - Provides functionalities for managing the lifecycle of the tokenized asset, including updates and recovery actions.
  
   ### High Level UML diagram
-  <br/>
   [![Screenshot-from-2024-02-19-19-25-00.png](https://i.postimg.cc/85yLm4rb/Screenshot-from-2024-02-19-19-25-00.png)](https://postimg.cc/DJXW2q6W)
 
 ### `OwnableApprovableERC721.sol`
@@ -323,14 +316,11 @@ If a distribution has not happened in at least `MinDistributionPeriod` blocks th
   - Extends the ERC721 standard to include enhanced ownership and approval checks, facilitating more granular access control over NFT actions.
 
   ### High Level UML diagram
-  <br/>
   [![Screenshot-from-2024-02-19-19-36-33.png](https://i.postimg.cc/mr6b3pSj/Screenshot-from-2024-02-19-19-36-33.png)](https://postimg.cc/rdxXMJ3R)
 
 This summary captures the core functionalities of the contracts involved in the Althea Liquid Infrastructure project, highlighting how they work together to facilitate the tokenization of assets, manage investment, and distribute revenue within a secure and compliant framework. The emphasis on regulatory compliance, security, and operational flexibility underscores the project's innovative approach to integrating real-world assets with blockchain technology.
 
 ## k) Full representation of the project’s risk model
-
-The OPUS protocol, like any decentralized finance (DeFi) platform, faces several categories of risk, including administrative, systemic, technical, and integration risks. Understanding and mitigating these risks are crucial for the security and efficiency of the protocol.
 
 ### Admin Abuse Risks
 
@@ -365,7 +355,7 @@ Admin Abuse Risks within the Althea project pertain to potential vulnerabilities
 
 | Package | Usage | 
 | --- |  --- | 
-| [`openzeppelin`](https://www.npmjs.com/package/@openzeppelin/contracts)  |  Project uses version `4.3.1 while the recommended version is latest stable version i.e: `5.0.1` 
+| [`openzeppelin`](https://www.npmjs.com/package/@openzeppelin/contracts)  |  Project uses version `4.3.1` while the recommended version is latest stable version i.e: `5.0.1` 
 
 
 ## m) New insights and learning of project from this audit:
@@ -390,23 +380,23 @@ The audit of the Althea Liquid Infrastructure project has yielded several critic
 
 The audit of the Althea Liquid Infrastructure project has identified several points of improvement that could enhance the project's functionality, security, and user experience. Addressing these areas can contribute significantly to the project's success and sustainability in the rapidly evolving blockchain ecosystem.
 
-### 1. **Upgradeability and Future-proofing**
+#### 1. **Upgradeability and Future-proofing**
 
 - **Implement Upgradeable Smart Contracts**: Utilizing proxy contracts or other upgradeability patterns can allow for future improvements and bug fixes without disrupting the existing ecosystem. This approach would enhance the project's flexibility and longevity.
 
-### 2. **Gas Efficiency and Optimization**
+#### 2. **Gas Efficiency and Optimization**
 
 - **Optimize Contract Functions for Gas Usage**: Analyzing and optimizing functions, especially those involving loops or large-scale data manipulation, can reduce transaction costs. optimizing storage variables, and minimizing state changes can contribute to efficiency.
 
-### 3. **Decentralized Governance**
+#### 3. **Decentralized Governance**
 
 - **Introduce Decentralized Governance Mechanisms**: Developing a DAO (Decentralized Autonomous Organization) for governance decisions, particularly around key parameters like revenue distribution ratios, allowlist criteria, and asset management policies, can further decentralize the project and align with blockchain principles.
 
-### 4. **Security and Auditing**
+#### 4. **Security and Auditing**
 
 - **Expand Bug Bounty Programs**: Establishing or expanding bug bounty programs can incentivize the community and security researchers to identify and report vulnerabilities, enhancing the project's overall security posture.
 
-### 5. **Market Adaptation and Integration**
+#### 5. **Market Adaptation and Integration**
 
 - **Cross-chain Functionality**: Investigating and implementing cross-chain interoperability solutions can open up wider markets and enhance the project's attractiveness by connecting with other blockchain ecosystems.
 
@@ -415,15 +405,8 @@ The audit of the Althea Liquid Infrastructure project has identified several poi
 By addressing these points of improvement, the Althea Liquid Infrastructure project can not only solidify its foundation but also expand its reach and impact in the DeFi and real-world asset tokenization space. Continuous improvement, driven by community feedback, security practices, and technological advancements, will be key to navigating the challenges and opportunities that lie ahead.
 
 
-
-
-
-
-
-
-
-
 NOTE: I didn't tracked time when auditing so the timeframe I selected is just a number
+
 
 ### Time spent:
 10 hours
