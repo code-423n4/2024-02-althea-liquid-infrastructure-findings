@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Limbooo",
+  "risk": "2",
+  "title": "Changing `distributableERC20s` During Distribution Lock",
+  "issueId": 599,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/599"
+}
