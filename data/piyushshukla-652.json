@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "piyushshukla",
+  "risk": "2",
+  "title": "OwnableUpgradeable` uses single-step ownership transfer",
+  "issueId": 652,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/652"
+}
