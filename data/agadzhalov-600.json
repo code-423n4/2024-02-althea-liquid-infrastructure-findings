@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "agadzhalov",
+  "risk": "2",
+  "title": "[M-3] Missing require for `setDistributableERC20s` during active distribution period can cause distribution of wrong token",
+  "issueId": 600,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/600"
+}
