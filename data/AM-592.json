@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "AM",
+  "risk": "3",
+  "title": "LiquidInfrastructureERC20 decimals are not taking into account when performing calculating of entitlement units",
+  "issueId": 592,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/592"
+}
