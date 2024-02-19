@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "agadzhalov",
+  "risk": "2",
+  "title": "# [M-2] A malicious user can implement a bot to execute `distribute(1)` every time the minimum distribution period has elapsed",
+  "issueId": 419,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/419"
+}
