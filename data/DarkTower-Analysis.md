@@ -64,7 +64,7 @@ With just 3 contracts in scope, the call traces of the codebase are relatively s
 
 
 ## 7. Some weak spots within the codebase and mitigations
- - Removal of zero-value holders - Currently if after you make a transfer to another holder, your balance drops to zero, you're no longer a holder but it doesn't check if the receiving holder's address has a non-zero value. It sets them up if they weren't previously regardless. Anyone can use this technique to inflate the holders array size.
+ - Removal of zero-value holders - Currently if after you make a transfer to another holder, your balance drops to zero, you're no longer a holder but it doesn't check if the receiving holder's address has a non-zero value. It sets them up as a holder if they weren't previously regardless. Anyone can use this oversight to inflate the holders array size.
 
  - Push technique for rewards - Currently rewards are distributed to holders of the ERC20. You can set an index to start distribution at but another way of implementing a better reward distribution process is by having the reciever take it themselves and keep track of each accumulated reward for all holders.
 
