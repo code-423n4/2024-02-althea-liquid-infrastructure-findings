@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xPluto",
+  "risk": "3",
+  "title": "Expecting a return value when calling ERC20 transfer( )",
+  "issueId": 414,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/414"
+}
