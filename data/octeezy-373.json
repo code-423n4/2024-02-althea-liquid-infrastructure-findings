@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "octeezy",
+  "risk": "3",
+  "title": "ERC20 transfer will revert for blacklisted addresses",
+  "issueId": 373,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/373"
+}
