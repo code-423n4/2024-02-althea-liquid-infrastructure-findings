@@ -1,5 +1,16 @@
 # Analysis Report
 
+| Sl.no | Particulars        |
+|-------|--------------------|
+| 1     | Preface            |
+| 2     | Audit approach overview |
+| 3     | Contest Overview           |
+| 4     | Approach Taken in Evaluating the Codebase |
+| 5     | Final Risk Verdict |
+| 6    | Centralization Risks |
+| 7    | How they can be mitigated |
+| 8    | Gas Optimizations  |
+
 ## Preface
 This audit report should be approached with the following points in mind:
 
@@ -26,7 +37,7 @@ Day 2:
 Day 3:
 * Writing analysis report
 
-## Overview
+## Contest Overview
 
 There are two main contracts (LiquidInfrastructureNFT.sol, LiquidInfrastructureERC20.sol) and one access control contract (OwnableApprovableERC721.sol)
 
@@ -188,9 +199,11 @@ Fix:
 ```
 
 ## Gas Optimizations:
+Apart from bot race results here are few optimizations
 
 Remove redundant code in `_beginDistribution()` to save gas
 - If distribution is called for the first time `erc20EntitlementPerUnit` will be empty and no external/public functions initializations available. And when distribution completed `_endDistribution` ensures to make erc20EntitlementPerUnit empty. So the check can be removed
+
 
 
 ### Time spent:
