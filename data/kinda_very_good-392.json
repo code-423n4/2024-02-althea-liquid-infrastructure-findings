@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "kinda_very_good",
+  "risk": "3",
+  "title": "A malicious actor can cause a gas grief the system by making zero transfer to an address to increase the size of the holders array",
+  "issueId": 392,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/392"
+}
