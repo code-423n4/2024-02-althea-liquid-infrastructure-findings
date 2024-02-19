@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "It appears that `mint()`, `burn()` and `burnFrom()` will be executed DURING the minimum distribution period if distribution not completed yet and any of the following functions are called: `mintAndDistribute()`, `burnAndDistribute()`, `burnFromAndDistribute()`.",
+  "issueId": 740,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/740"
+}
