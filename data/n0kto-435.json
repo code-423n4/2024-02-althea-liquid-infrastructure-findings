@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "n0kto",
+  "risk": "3",
+  "title": "Inclusion of address(0) in `holders array on token burn",
+  "issueId": 435,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/435"
+}
