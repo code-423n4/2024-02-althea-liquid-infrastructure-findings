@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "willycode20",
+  "risk": "3",
+  "title": "The _withdrawalBalancesTo() in LiquidInfrastructureNFT.sol doesn't follow CEI pattern, risk of reentrancy is therefore possible",
+  "issueId": 443,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/443"
+}
