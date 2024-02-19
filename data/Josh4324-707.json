@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Josh4324",
+  "risk": "3",
+  "title": "Blacklisted Address on ERC20 tokens can lead to Denial of Service",
+  "issueId": 707,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/707"
+}
