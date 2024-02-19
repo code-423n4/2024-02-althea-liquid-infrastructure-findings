@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "BradMoon",
+  "risk": "2",
+  "title": "ERC20 Token Transfer Vulnerability in _withdrawBalancesTo Function",
+  "issueId": 397,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/397"
+}
