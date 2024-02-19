@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "kk_krish",
+  "risk": "2",
+  "title": "`_withdrawBalancesTo `  fail on ERC20 transfer",
+  "issueId": 408,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/408"
+}
