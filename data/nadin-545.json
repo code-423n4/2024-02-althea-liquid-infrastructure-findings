@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "nadin",
+  "risk": "2",
+  "title": "`to` is unchecked in `releaseManagedNFT()`, which can cause user's NFT to be frozen",
+  "issueId": 545,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/545"
+}
