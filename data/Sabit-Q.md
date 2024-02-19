@@ -83,4 +83,16 @@ Consider reverting with a custom error message.
 
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413-L429
 
+5.  Incorrect Event Emission in _withdrawBalancesTo()
 
+The SuccessfulWithdrawal event at the end of _withdrawBalancesTo() emits the amounts array without iterating over it. This causes erc20s.length to be included in the event.
+
+Impact:
+
+- The event does not contain the transfer amounts for each ERC20 as intended.
+- It will only show the erc20s.length.
+
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureNFT.sol#L184
+
+Recommendation:
+emit should be inside the for loop and amounts should be iterated over - amounts[i]
