@@ -104,20 +104,12 @@ The Access Control Roles in the Althea Liquid Infrastructure Project serve as a 
 
 ## Test Coverage
 
---------------------------------|----------|----------|----------|----------|----------------|
-File                            |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
---------------------------------|----------|----------|----------|----------|----------------|
- contracts/                     |    90.41 |    67.65 |    91.43 |    90.12 |                |
-  LiquidInfrastructureERC20.sol |    94.32 |     63.1 |    90.48 |    92.66 |... 348,444,468 |
-  LiquidInfrastructureNFT.sol   |      100 |    85.71 |      100 |      100 |                |
-  OwnableApprovableERC721.sol   |      100 |      100 |      100 |      100 |                |
-  TestERC20A.sol                |      100 |      100 |      100 |      100 |                |
-  TestERC20B.sol                |      100 |      100 |      100 |      100 |                |
-  TestERC20C.sol                |      100 |      100 |      100 |      100 |                |
-  TestERC721A.sol               |        0 |      100 |        0 |        0 |... 18,19,20,21 |
---------------------------------|----------|----------|----------|----------|----------------|
-All files                       |    90.41 |    67.65 |    91.43 |    90.12 |                |
---------------------------------|----------|----------|----------|----------|----------------|
+| File                            | % Statements | % Branch | % Functions | % Lines | Uncovered Lines       |
+|---------------------------------|--------------|----------|-------------|---------|-----------------------|
+| **Overall Project**             | **90.41%**   | **67.65%**| **91.43%**  | **90.12%** |                       |
+| `LiquidInfrastructureERC20.sol` | 94.32%       | 63.1%    | 90.48%      | 92.66%  | ... 348,444,468       |
+| `LiquidInfrastructureNFT.sol`   | 100%         | 85.71%   | 100%        | 100%    |                       |
+| `OwnableApprovableERC721.sol`   | 100%         | 100%     | 100%        | 100%    |                       |
 
 
 ## Codebase Review
@@ -152,6 +144,8 @@ All files                       |    90.41 |    67.65 |    91.43 |    90.12 |   
 | End Date   | 19.02.2024 |
 | Days spent | 2 Days     |
 | Hours      | 20hrs        |
+
+
 
 
 ### Time spent:
