@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "CaeraDenoir",
+  "risk": "2",
+  "title": "The `withdrawFromManagedNFTs` function can be frontrun by anyone when a distribution is possible to prevent the withdrawal.",
+  "issueId": 410,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/410"
+}
