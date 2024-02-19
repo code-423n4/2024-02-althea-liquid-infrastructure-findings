@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`LiquidInfrastructureERC20::mint()` - Combined with the fact that owner can make himself a holder, the fact that owner can mint as many LI ERC20 tokens as he wants to himself, enables a vulnerability where he can game the system and during distributions get the biggest share of the rewards, effectively taking rewards that belong to other holders, due to his unfair advantage in terms of total tokens held.",
+  "issueId": 731,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/731"
+}
