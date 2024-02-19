@@ -91,10 +91,14 @@ The tokens cannot to transferred to anyone who isn't approved by the owner, some
 - Circulation of the Liquid token is hindered,
 - Since when a holder transfers out all their tokens they are no longer a holder or approved to hold the tokens, acquisition of such tokens will be very hard and tiring for both the soon-to-be holders and the owner, as they have to constantly be approving people before the can be in possession the liquidInfra tokens, also considering the gas cost and time it would the for the users to be approved, users may be disincentivized from holding such a token.
 
-The protocol, techniques and strategies for gen
+The protocol, techniques and strategies for generating revenue is mind blowing, as capitalizing on real world assets using NFTs would drive the prices of such NFTs crazy, also the management and the simple to understand architecture and functionality of the protocol will make it’s adoption faster and smoother for users/investors hoping to join the Althea L1 protocol.
 # Test suites.
 coverage of the testing suites and bits of advice on areas to test.
+
+The test suite mainly covered the approvals and the restrictions placed on the token during distribution, I recommend more fuzz tests, Invariant tests and calculation tests concerning the manipulation of the holders entitlements before or during distribution.
+
 # Weakspots and single points of failure.
+Mainly all these lie on the conduct of the owner of the Liquid token and anyone interacting with the protocol should be fully aware that the owner is a single point of failure to the system and any misconduct can be very deterimental to the holder of the Liquid Infra Tokens
 
 
 
@@ -115,6 +119,8 @@ Software engineering considerations
 Attacker mindset: When I was attacking the system these are the areas I was thinking about. rounding
 Admin privileges.
 Test suite coverage.
+
+
 
 
 
