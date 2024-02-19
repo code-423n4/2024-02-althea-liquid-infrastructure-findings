@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "3",
+  "title": "`LiquidInfrastructureERC20::distributeToAllHolders()` - Gas griefing combo DoS attack vector: Due to lack of access control and/or lack of throttling/frequency-limiting mechanisms, an attacker can repeatedly call this function manually or via mempool bots and DoS contract/protocol functionality.",
+  "issueId": 728,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/728"
+}
