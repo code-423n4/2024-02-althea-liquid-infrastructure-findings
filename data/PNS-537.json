@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "PNS",
+  "risk": "2",
+  "title": "Inconsistent lists of added ERC20 tokens to `LiquidInfrastructureNFT` and `LiquidInfrastructureERC20` may deprive holders of profits",
+  "issueId": 537,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/537"
+}
