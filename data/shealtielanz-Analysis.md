@@ -52,8 +52,30 @@ Integration-related issues concern mainly the deployment of the modular contract
 ## Non-Token Standard.
 Concerning token standards, the `entitlements` to be distributed to the different holders are calculated using the contract and the distributable token's balance, tokens with weird decimals should be considered in scenarios like this, since must be made to the holders before the end of a distribution, tokens with weird transfer logic should also be considered during integration with other tokens.
 # Software Engineering Considerations.
-rewrite functions in an efficient manner,
-modifiers, redundant functions, gas efficiency, use foundry for testing, more audits, version of Open zeppelin isn't recent, no determined/specific invariants
+The codebase of the protocol is fairly small and very efficiently written(concerning the approvals and the tokens logic), however, there are so considerations I would love to point out.
+- Most functions are not gas afficient(eg the `distribute()`, `addManagedNFTS()`,`_beginDistribution()`)
+> [!IMPORTANT] 
+> consider writing functions in a gas efficient manner to reduce the cost of calling such function on-chain. 
+
+- Multiple functions contain very similar logic that could be efficiently put into one function.
+- Repeated checks that could be made as modifiers.
+- Input validations on important function were overlooked.
+> [!CAUTION]
+> Lack of proper input validation can lead to different classes of bugs that can ruin the system and shame the protocol.
+
+- Lack of access control on protocol damaging functions.
+
+**Solution**
+
+- Rewrite functions in an more gas efficient manner,
+- Modifiers can be used, 
+- Redundant functions should be eliminated, gas efficiency, 
+- Use foundry for testing, as it is more common amongst auditors.
+- More audits, 
+- Latest version of Open zeppelin should be used.
+- Determine specific invariants.
+- Fuzz/Invariant tests. 
+
 # In-depth architecture assessment of business logic.
 user flows and functionalities of the protocol.
 # Test suites.
@@ -79,6 +101,8 @@ Software engineering considerations
 Attacker mindset: When I was attacking the system these are the areas I was thinking about. rounding
 Admin privileges.
 Test suite coverage.
+
+
 
 
 
