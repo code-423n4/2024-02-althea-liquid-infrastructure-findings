@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "developerjordy",
+  "risk": "2",
+  "title": "Burn is missing access control",
+  "issueId": 526,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/526"
+}
