@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "turvy_fuzz",
+  "risk": "2",
+  "title": "Protocol distribution will frequently be disabled if a token that doesn't allow zero value transfers is be added as a revenue token",
+  "issueId": 405,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/405"
+}
