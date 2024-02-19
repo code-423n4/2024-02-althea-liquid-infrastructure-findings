@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "King_",
+  "risk": "2",
+  "title": "Varying decimals between distributable ERCs and liquidInfrastructure ERC decimals can cause user distribution to always be 0",
+  "issueId": 684,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/684"
+}
