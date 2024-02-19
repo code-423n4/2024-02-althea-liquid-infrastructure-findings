@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Brenzee",
+  "risk": "2",
+  "title": "Entitlement is calculated incorrectly which causes the rewards to be distributed incorrectly",
+  "issueId": 439,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/439"
+}
