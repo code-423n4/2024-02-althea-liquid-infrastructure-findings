@@ -57,4 +57,30 @@ Recommendations:
 - Include the iteration in the receipts emitted - "receipts[j]"
 
 
+4. Transferring NFT to Zero Address
+
+he releaseManagedNFT() function allows transferring a managed NFT to the zero address, which permanently locks the NFT.
+
+Impact:
+
+Transferring an NFT to 0x0 permanently locks it and makes it unusable.
+This can lead to loss of managed NFT assets.
+Reproduction:
+
+Call releaseManagedNFT() with 0x0 as the 'to' address.
+The NFT will be transferred to 0x0 and locked.
+Expected:NFTs should only be allowed to be transferred to valid, non-zero addresses.
+
+Actual:NFTs can be transferred to the zero address.
+
+Code Issue:There is no validation on the 'to' address passed to releaseManagedNFT().
+
+Recommendations:
+
+Add require(to != address(0)) to prevent zero address.
+
+Consider reverting with a custom error message.
+
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413-L429
+
 
