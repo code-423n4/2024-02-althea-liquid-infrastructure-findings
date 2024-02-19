@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "turvy_fuzz",
+  "risk": "3",
+  "title": "Malicious NFT account actors can still withdraw the contracts ERC20 balances after transferring ownership of the NFT to the LiquidInfrastructureERC20",
+  "issueId": 743,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/743"
+}
