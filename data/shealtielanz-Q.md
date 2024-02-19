@@ -7,7 +7,7 @@
 |L-01 | NFT tokens could be lost forever on the call to `releaseManagedNFT()`. | 1 |
 |L-02 | Create a function to add to `distributableERC20s` so the owner doesn't always have to overwrite the list of `ERC20`s whenever he/she intends to add more `distributableERC20s` tokens to the contracts. | 1 |
 | N-01 | The `constructor()` doesn't check if the contract owns the managed NFTs. | 1 |
-| N-02 | Test suite coverage doesn't cover some functions. | 3 |
+| N-02 | Test suite coverage doesn't cover some edge cases. | 3 |
 |N-03 | Redundant function. | 1 |
 
 
@@ -29,7 +29,7 @@ Use Always `safeTransferFrom()`, because in a situation where the to address is 
 > [!Warning]
 > In a scenario, where the LiquidInfrastructureNFT is lost all the accrued revenue will also be lost.
 ## Recommended Mitigation.
-Make use of OZs `safeTransferFrom()` to transfer the NFTs to the recipientt.
+Make use of OZs `safeTransferFrom()` to transfer the NFTs to the recipients.
 **Sample of fix:**
 ```diff
     function releaseManagedNFT(
@@ -45,7 +45,7 @@ Make use of OZs `safeTransferFrom()` to transfer the NFTs to the recipientt.
 
 # L-02 Create a function to add to `distributableERC20s` so the owner doesn't always have to overwrite the list of `ERC20`s whenever he/she intends to add more `distributableERC20s` tokens to the contracts.
 ## Summary 
-In `LiquidInfrastructureERC20`, the owner has to always reset the `distributableERC20s` in any scenario he/she wants to and more distributable tokens to the contracts:
+In `LiquidInfrastructureERC20`, the owner has to always reset the `distributableERC20s` in any scenario he/she wants to add more distributable tokens to the contracts:
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L441C1-L445C6
 ```solidity
   function setDistributableERC20s(
@@ -100,7 +100,7 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee471
 ## Recommended Mitigation.
 Perform tests on such cases that are likely to occur in the protocol.
 
-# N-02 Redundant function.
+# N-03 Redundant function.
 ## Summary 
 The `mint()` and `mintAndDistribute()` contain the same logic, except that the `mintAndDistribute()` checks if `_isPastMinDistributionPeriod()` and attempts to distribute if `true`:
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L303C1-L323C6
@@ -125,7 +125,7 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee471
 
 ```
 
-The thing here is that, `mint()` will always revert if the `_isPastMinDistributionPeriod()` returns `true`, so the caller will still have to manually call `distribute()` before the can successfully call `mint()`. this is because of the hooks placed when minting and burning:
+The thing here is that `mint()` will always revert if the `_isPastMinDistributionPeriod()` returns `true`, so the caller will still have to manually call `distribute()` before he can successfully call `mint()`. this is because of the hooks placed when minting and burning:
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L303C1-L311C6
 ```solidity
    function _beforeMintOrBurn() internal view {
@@ -136,7 +136,7 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee471
         );
     }
 ```
-so it is useless to have to minting functions when the both behave extactly the same.
+so it is useless to have two minting functions when both behave exactly the same.
 ## Recommended Mitigation.
 The issue can be solved by clearing the `mint()` function and sticking with the `mintAndDistribute()` 
 **sample of fix**
