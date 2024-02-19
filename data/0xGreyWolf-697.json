@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xGreyWolf",
+  "risk": "2",
+  "title": "Push pattern in `LiquidInfrastructureERC20::distribute()` and `LiquidInfrastructureNFT::_withdrawBalancesTo()` will cause distributions and withdrawals too costly and borderline financial risk",
+  "issueId": 697,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/697"
+}
