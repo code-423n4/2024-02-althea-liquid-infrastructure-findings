@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xGreyWolf",
+  "risk": "3",
+  "title": "Using ERC20 `transfer` function in `LiquidInfrastructureERC20::distribute()` will result to USDT being forever locked in the contract",
+  "issueId": 658,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/658"
+}
