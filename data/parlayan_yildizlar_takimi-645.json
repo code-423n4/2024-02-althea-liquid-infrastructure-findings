@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "parlayan_yildizlar_takimi",
+  "risk": "3",
+  "title": "Incorrect Token Distribution Due To Decimal Mismatch",
+  "issueId": 645,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/645"
+}
