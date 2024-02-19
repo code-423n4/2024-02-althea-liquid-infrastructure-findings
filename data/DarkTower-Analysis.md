@@ -49,7 +49,7 @@ There are two centralization points in the protocol:
 
 1. The `LiquidInfrastructureERC20` owner who has control over the ERC20 contract. They have privileged actions such as setting the list of distributable reward tokens, removing and adding addresses who can hold the ERC20. This can be utilized as a multisig address to further decentralize the privileges of this single owner.
 
-2. The `LiquidInfrastructureNFT` presents the similar risks but we think the more interesting contracts are always prone to weird behaviors which means the centralization risks of the NFT owner is far less compared to the ERC20 owner. For examole, the withrawal of funds to yourself (owner) can be considered design and won't compare to the ability to enlist fake reward tokens in the Liquid ERC20 contract.
+2. The `LiquidInfrastructureNFT` presents the similar risks but we think the more interesting contracts are always prone to weird behaviors which means the centralization risks of the NFT owner is far less compared to the ERC20 owner. For example, the withrawal of funds to yourself (owner) can be considered design and won't compare to the ability to enlist fake reward tokens in the Liquid ERC20 contract.
 
 
 ## 5. Diagrams
@@ -74,6 +74,8 @@ With just 3 contracts in scope, the call traces of the codebase are relatively s
 
 ### Time spent:
 24 hours
+
+
 
 ### Time spent:
 24 hours
