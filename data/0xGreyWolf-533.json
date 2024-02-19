@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xGreyWolf",
+  "risk": "3",
+  "title": "The value of `entitlement` in `LiquidInfrastructureERC20::_beginDistribution()` will always be zero",
+  "issueId": 533,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/533"
+}
