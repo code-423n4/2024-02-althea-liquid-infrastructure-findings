@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xloscar01",
+  "risk": "2",
+  "title": "`LiquidInfrastructureERC20.sol` disapproved holders keep part of the supply, diluting approved holders revenue.",
+  "issueId": 703,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/703"
+}
