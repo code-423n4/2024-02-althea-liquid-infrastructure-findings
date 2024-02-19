@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "when a holder is disapproved, his token share is still counted when calculating erc20EntitlementPerUnit, leading to incorrect distribution",
+  "issueId": 413,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/413"
+}
