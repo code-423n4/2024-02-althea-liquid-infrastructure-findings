@@ -1,0 +1,1 @@
+The function distributeToAllHolders is declared 'public', this should be made 'private' to allow only calls from the contract and derived contracts only. A user may call this contract allowing for spending unintended gas fee
