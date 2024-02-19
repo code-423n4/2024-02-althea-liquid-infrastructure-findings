@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "DanielArmstrong",
+  "risk": "2",
+  "title": "Zero addresses are inserted into holders array repeatedly.",
+  "issueId": 491,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/491"
+}
