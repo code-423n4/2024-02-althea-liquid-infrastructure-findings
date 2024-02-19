@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "CodeWasp",
+  "risk": "3",
+  "title": "Unprivileged address can steal abritrary amounts of distribution rewards",
+  "issueId": 534,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/534"
+}
