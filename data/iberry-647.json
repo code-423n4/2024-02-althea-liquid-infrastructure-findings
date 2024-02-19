@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "LiquidInfrastructureERC20#burnFromAndDistribute can be called by anyone",
+  "issueId": 647,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/647"
+}
