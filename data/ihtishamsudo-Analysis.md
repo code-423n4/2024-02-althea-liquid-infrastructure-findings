@@ -294,14 +294,14 @@ As addressed by Sponsor in Discord Chat and according to `packages.json` protoco
 
 ## Time Spent 
 
-1. Joined Contest At 5th Day
+1. Joined Contest At 4th Day
 - Day spent on Understanding the protocol and its functionalities and features.
 
-2. Day 6 
+2. Day 5 
 - Made notes and point out some audit tags on weak spots in code
 - connected weak spots to find out some attack surface and vulberabilities in the codebase.
 
-3. Day 7 
+3. Day 6 
 - Write Reports For Finding
 - Made some diagrams to understand the protocol and to use in the anlysis report as well
 - Submit Findings and Analysis Report
@@ -309,6 +309,8 @@ As addressed by Sponsor in Discord Chat and according to `packages.json` protoco
 Total Hours 
 
 20 Hours
+
+
 
 ### Time spent:
 20 hours
