@@ -15,7 +15,7 @@ It implements check onERC721Received when transferring tokens to contracts. Whic
 
 ## [L-02] `distribute` function of `LiquidInfrastructureERC20.sol` will revert if array `erc20EntitlementPerUnit` length is less than `distributableERC20s` array length.
 
-Since both uses `distributableERC20s.length` to access their elements 
+Since both uses `distributableERC20s.length` to access their elements so it will revert
 
 ```solidity
   for (i = nextDistributionRecipient; i < limit; i++) {
