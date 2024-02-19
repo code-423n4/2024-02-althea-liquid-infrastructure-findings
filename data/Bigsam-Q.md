@@ -1,0 +1,2 @@
+mint function lacks a direct check for whether a distribution has occurred within the MinDistributionPeriod blocks.The mintAndDistribute function does check this before calling mint, but the mint function can be called independently so it requires this check also. 
+consider adding require statement at the beginning of the mint function to check whether the minimum distribution period has passed.
