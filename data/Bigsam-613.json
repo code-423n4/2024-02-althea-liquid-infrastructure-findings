@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Bigsam",
+  "risk": "2",
+  "title": "Disapproved Holders will still be listed in holders list, thereby unneccessarily increasing the gas fee that will be used to distribute rewards.",
+  "issueId": 613,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/613"
+}
