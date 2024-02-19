@@ -1,28 +1,25 @@
-## [L-01] Owner centralization risks.
+## [L-01] Owner centralization risks
+There are a bunch of centralization risk issues in the `LiquidInfrastructureERC20` and `LiquidInfrastructureNFT` contract that poses malicious owner risks for users of the protoco. These scenarios are listed below:
 
-There are many centralization risk scenario may occur with the owner role of the protocol. The risks are
+1. An owner of the NFT can choose to sell their NFT in Opensea marketplace, thereby locking funds in the contract.
 
-1. Owner can sell his NFT which will lock the funds.
-2. If a scam NFT contract is added to the ManagedNFTs mapping by owner, it could DOS the `distribute` function.
+2. The `LiquidInfrastructureERC20` owner can choose to add a bunch of trash ERC20 tokens as distributable tokens as there's no way to enforce strict adhering to a whitelisted ERC20 token list by the protocol which could DoS the `distribute` function.
 
-3. Owner can add a bunch of trash ERC20s and DOS `distribute` function.
-
-```solidity
-    function setDistributableERC20s(
-        address[] memory _distributableERC20s
-        ) public onlyOwner {
-            distributableERC20s = _distributableERC20s;
-    }
+The instance of code for 2. is seen below:
+```js
+  function setDistributableERC20s(
+    address[] memory _distributableERC20s // @audit any ERC20 token can be set
+    ) public onlyOwner {
+        distributableERC20s = _distributableERC20s;
+  }
 ```
 
-4. Owner can honeypot users by removing them from allowlist. 
-5. Owner can rug-pull the users by adding a rug NFT token.
+3. The `LiquidInfrastructureERC20` owner can honeypot users by removing those users from the allowlist after minting the Liquid ERC20 token to them initially. 
 
-To avoid such situations, a better decentralized solution is recommended.
 
-## [L-02] The function `releaseManagedNFT` should revert if `managedNft` contract is not available.
+## [L-02] The function `releaseManagedNFT` should revert if a `managedNft` is not found
 
-The function `releaseManagedNFT` is used to release a NFT which is defined by param `address nftContract` but the function doesn't check the NFT exists or not. The function should revert if the contract is not found.
+The `releaseManagedNFT` function is used to release a NFT which is defined by the parameter `address nftContract` but the function doesn't check whether the NFT exists or not. The function should revert if the `nftContract` to remove is non-existent.
 
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413
 
@@ -37,7 +34,7 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
         // Remove the released NFT from the collection
         for (uint i = 0; i < ManagedNFTs.length; i++) {
             address managed = ManagedNFTs[i];
-            if (managed == nftContract) {
+            if (managed == nftContract) { // @audit loops for nothing if the `nftContract` to remove is not found.
                 // Delete by copying in the last element and then pop the end
                 ManagedNFTs[i] = ManagedNFTs[ManagedNFTs.length - 1];
                 ManagedNFTs.pop();
@@ -45,24 +42,24 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
             }
         }
         // By this point the NFT should have been found and removed from ManagedNFTs
-        require(true, "unable to find released NFT in ManagedNFTs"); //@audit this require does nothing ? Can an NFT be present here
+        require(true, "unable to find released NFT in ManagedNFTs");
 
         emit ReleaseManagedNFT(nftContract, to);
     }
 
 ```
 
-## [L-03] The name of account created using the `LiquidInfrastructureNFT` contract can be frontrunned.
+## [L-03] Project names being created by `LiquidInfrastructureNFT` can be frontrun
 
-The contructor in the contract `LiquidInfrastructureNFT` constructs the underlying ERC721 with a URI like `"althea://liquid-infrastructure-account/{accountName}"`, and a symbol like `"LIA:{accountName}"`. But the `accountName` can be frontrunned by others and that name can't be taken by original caller in future.
+The contructor in the `LiquidInfrastructureNFT` contract constructs the underlying ERC721 with a URI such as `"althea://liquid-infrastructure-account/{accountName}"`, and a symbol `"LIA:{accountName}"`. But the `accountName` can be frontrun by others resulting in a case where the name is taken by another project.
 
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureNFT.sol#L62C1-L74C6
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureNFT.sol#L62-L74
 
 ```solidity
   constructor(
         string memory accountName
     )
-    // @audit this can be frontrunned
+    // @audit this can be frontrun
         ERC721(
             string.concat(
                 "althea://liquid-infrastructure-account/",
@@ -75,85 +72,105 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
     }
 ```
 
-## [L-04] Fee-on-transfer tokens can reduce the revenue of holders.
+## [L-04] Fee-on-transfer tokens can reduce the revenue of holders
 
-Tokens like USDC and USDT are used in the projects. These tokens are fee-on-transfer type of ERC20 tokens. `withdrawFromManagedNFTs` function is used to deposit all the tokens balances into the custody. On depositing fee on transfer tokens can reduce the revenue of holders. The recommendation is to use less internal transfer with fee on transfer tokens.
+Tokens like USDC and USDT utilize upgradeable proxies for their contracts and can become fee-on-transfer tokens in the future if they choose to. On depositing, such fee on transfer tokens can reduce the revenue of holders. The recommendation is to reduce internal transfers as this can eat up into the holder rewards.
 
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L376C1-L378C52
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L376-L378
 
-```solidity
+```js
 (address[] memory withdrawERC20s, ) = withdrawFrom.getThresholds();
-            withdrawFrom.withdrawBalancesTo(withdrawERC20s, address(this));
-            emit Withdrawal(address(withdrawFrom));
+    withdrawFrom.withdrawBalancesTo(withdrawERC20s, address(this));
+    emit Withdrawal(address(withdrawFrom));
 ```
 
-## [NC-01] Add some getter functions.
+## [L-05] Expose some getter functions
 
-Add a getter function to list out the holders addresses unlike in current implementation holders are private variables, holder addresses list can't be accessed by owners directly.
+Add a getter function to retrieve list of all holder address. In the current implementation of the `LiquidInfrastructureERC20` contract, the `holders` array is private. Imagine the owner of the `LiquidInfrastructureERC20` token tells Bob they're an approved holder after a mint of the token but how does Bob verify this information onchain without being tech-savvy to access the private data. There is no way for him to do that. Expose a getter function for the `holders` array.
 
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L48
 
-```solidity
+```js
   address[] private holders;
 ```
 
-## [NC-02] Project usages very old version of Openzeppelin's Libs.
+## [L-06] Protocol uses very old version of Openzeppelin Library.
 
 Using an old version can lead to worse gas performance, known contract issues, and potential 0-day issues.
 
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/package.json#L23
 
-```solidity
+```js
 @>     "@openzeppelin/contracts": "4.3.1",
 ```
 
-## [NC-03] `thresholdAmounts` are not always equal to the amount received by the `LiquidNFT` contract.
+## [L-07] `withdrawFromManagedNFTs` should restrict access to only the owner the `LiquidInfrastructureERC20` contract
+With the current implementation of the `withdrawFromManagedNFTs` function, a managed NFT owner can choose to withdraw at any time. This function is better suited to be restricted to the owner of the `LiquidInfrastructureERC20` contract.
 
-## [NC-04] `withdrawFromManagedNFTs` should restrict access as owner of NFT can decide to run `withdrawBalances`
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L359-L387
 
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L359C4-L387C1
-
-```solidity
+```js
  function withdrawFromManagedNFTs(uint256 numWithdrawals) public {
-        require(!LockedForDistribution, "cannot withdraw during distribution");
+    require(!LockedForDistribution, "cannot withdraw during distribution");
 
-        if (nextWithdrawal == 0) {
-            emit WithdrawalStarted();
-        }
-
-        uint256 limit = Math.min(
-            numWithdrawals + nextWithdrawal,
-            ManagedNFTs.length
-        );
-        uint256 i;
-        for (i = nextWithdrawal; i < limit; i++) {
-            LiquidInfrastructureNFT withdrawFrom = LiquidInfrastructureNFT(
-                ManagedNFTs[i]
-            );
-
-            (address[] memory withdrawERC20s, ) = withdrawFrom.getThresholds();
-            withdrawFrom.withdrawBalancesTo(withdrawERC20s, address(this));
-            emit Withdrawal(address(withdrawFrom));
-        }
-        nextWithdrawal = i;
-
-        if (nextWithdrawal == ManagedNFTs.length) {
-            nextWithdrawal = 0;
-            emit WithdrawalFinished();
-        }
+    if (nextWithdrawal == 0) {
+        emit WithdrawalStarted();
     }
+
+    uint256 limit = Math.min(
+        numWithdrawals + nextWithdrawal,
+        ManagedNFTs.length
+    );
+    uint256 i;
+    for (i = nextWithdrawal; i < limit; i++) {
+        LiquidInfrastructureNFT withdrawFrom = LiquidInfrastructureNFT(
+            ManagedNFTs[i]
+        );
+
+        (address[] memory withdrawERC20s, ) = withdrawFrom.getThresholds();
+        withdrawFrom.withdrawBalancesTo(withdrawERC20s, address(this));
+        emit Withdrawal(address(withdrawFrom));
+    }
+    nextWithdrawal = i;
+
+    if (nextWithdrawal == ManagedNFTs.length) {
+        nextWithdrawal = 0;
+        emit WithdrawalFinished();
+    }
+}
+```
+
+## [L-08] Remove unnecessary inherits
+The `ERC20` contract does not need to be imported again when it is already imported in the `ERC20Burnable` contract. Similarly, `OwnableApprovableERC721` already imports the `ERC721` implementation. Thereby re-importing is redundant.
+
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L31
+
+```js
+  contract LiquidInfrastructureERC20 is
+  @>    ERC20,
+      ERC20Burnable,
+      Ownable,
+      ERC721Holder,
+      ReentrancyGuard
+  {...}
+```
+
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureNFT.sol#L33
+
+```js
+ @> contract LiquidInfrastructureNFT is ERC721, OwnableApprovableERC721 {...}
 
 ```
 
-## [NC-05] Remove unnecessary checks from functions.
+## [L-09] Remove unnecessary checks from functions
 
-There are many instances in which unnecessary checks are implemented which just increases the gas cost and byte code of contract.
+There are many instances in which unnecessary checks are implemented which just increases the gas cost and byte code of the contracts
 
 1. `_isPastMinDistributionPeriod` and `mint` can never be run together. The check highlighted in the code is unnecessary.
 
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L303
 
-```solidity
+```js
     function mintAndDistribute(
         address account,
         uint256 amount
@@ -167,9 +184,9 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
 
 2. `_isPastMinDistributionPeriod` and `burnFrom` can never be run together. The check highlighted in the code is unnecessary.
 
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L344C1-L349C6
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L344-L349
 
-```solidity
+```js
     function burnFromAndDistribute(address account, uint256 amount) public {
 @>        if (_isPastMinDistributionPeriod()) {
             distributeToAllHolders();
@@ -178,11 +195,11 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
     }
 ```
 
-3. The `require` check in the highlighted code does nothing. It should be removed the this function.
+3. The `require` check in the highlighted code does nothing. It should be removed from the function.
 
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413C1-L434C6
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413-L434
 
-```solidity
+```js
     function releaseManagedNFT(
         address nftContract,
         address to
@@ -208,30 +225,9 @@ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liq
 
 ```
 
-## [NC-06] Remove unnecessary inherits from contracts.
+## [NC-01] `thresholdAmounts` are not always equal to the amount received by the `LiquidNFT` contract.
 
-All the functionality of ERC20 are included in the ERC20Burnable of OpenZeppelin with an extra feature that owner can burn all of his tokens. Similarly, OwnableApprovableERC721 contains all the functionality of ERC721 of OpenZeppelin. So it recommended to consider inheriting from `ERC20Burnable` and `OwnableApprovableERC721` only.
-
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L31
-
-```solidity
-contract LiquidInfrastructureERC20 is
-@>    ERC20,
-@>    ERC20Burnable,
-    Ownable,
-    ERC721Holder,
-    ReentrancyGuard
-{...}
-```
-
-https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/LiquidInfrastructureNFT.sol#L33
-
-```solidity
-contract LiquidInfrastructureNFT is ERC721, OwnableApprovableERC721 {...}
-
-```
-
-## [NC-08] Typos
+## [NC-02] Typos
 
 The comment should be `ownerOf` instead of `onwerOf` here.
 https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/main/liquid-infrastructure/contracts/OwnableApprovableERC721.sol#L9
