@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "CaeraDenoir",
+  "risk": "2",
+  "title": "The `distribute` function could revert no matter the numDistributions value if the `distributableERC20s` array changes the length.",
+  "issueId": 398,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/398"
+}
