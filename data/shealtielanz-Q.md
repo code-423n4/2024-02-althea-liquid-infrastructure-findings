@@ -14,6 +14,7 @@
 # L-01 NFT tokens could be lost forever on the call to `releaseManagedNFT()`.
 ## Summary 
 In `LiquidInfrasture::releaseManagedNFT()`, the function use `transferFrom()` to send the NFT to the reciepient:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L413C1-L418C62
 ```solidity
     function releaseManagedNFT(
         address nftContract,
@@ -45,6 +46,7 @@ Make use of OZs `safeTransferFrom()` to transfer the NFTs to the recipientt.
 # L-02 Create a function to add to `distributableERC20s` so the owner doesn't always have to overwrite the list of `ERC20`s whenever he/she intends to add more `distributableERC20s` tokens to the contracts.
 ## Summary 
 In `LiquidInfrastructureERC20`, the owner has to always reset the `distributableERC20s` in any scenario he/she wants to and more distributable tokens to the contracts:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L441C1-L445C6
 ```solidity
   function setDistributableERC20s(
         address[] memory _distributableERC20s
@@ -69,6 +71,7 @@ Create a function to add to the already existent `distributableERC20s` of the co
 # N-01 The `constructor()` doesn't check if the contract owns the managed NFTs.
 ## Summary 
 During deployment, the `LiquidInfrastructureERC20` cannot check if it is approved of or owns the ManagedNFTs, Inputted in the constructor and it is paramount that the LiquidInfrastructure owns or is approved of those NFT addresses:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L456C1-L464C35
 ```solidity
     constructor(
         string memory _name,
@@ -84,7 +87,7 @@ This can cause issues when calling `withdrawFromManagedNFTs()` if the address is
 > [!Note]
 > `withdrawFromManagedNFTs()` is the main source of revenue for the `LiquidInFrastructureERC20`, if the withdrawal process is bricked the LiquidInfra Tokens.
 ## Recommended Mitigation.
-don't set the _managedNFTS in the `constructor()`, use `addManagedNFT()` to add the managed NFTs as it implements the appropriate checks.
+don't set the `_managedNFT` in the `constructor()`, use `addManagedNFT()` to add the managed NFTs as it implements the appropriate checks.
 
 # N-02 Test suite coverage doesn't cover some edge cases.
 ## Summary
@@ -93,13 +96,14 @@ The tests are well written, however, certain scenarios were not tested like:
 - Gas testing as functions will have to be called multiple times to execute certain events like
 * Distribution
 * Withdrawals
-Given the amount of loops used in the contract, that could also be recommended.
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/test/liquidERC20.ts#L1C1-L25C32
 ## Recommended Mitigation.
 Perform tests on such cases that are likely to occur in the protocol.
 
 # N-02 Redundant function.
 ## Summary 
 The `mint()` and `mintAndDistribute()` contain the same logic, except that the `mintAndDistribute()` checks if `_isPastMinDistributionPeriod()` and attempts to distribute if `true`:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L303C1-L323C6
 ```solidity
     function mintAndDistribute(
         address account,
@@ -121,7 +125,8 @@ The `mint()` and `mintAndDistribute()` contain the same logic, except that the `
 
 ```
 
-The thing here is that, `mint()` will always revert if the `_isPastMinDistributionPeriod()` returns `true`, so the caller will still have to manually call `distribute()` before the can successfully call `mint()`. this is because of the hooks placed when minting and burning.
+The thing here is that, `mint()` will always revert if the `_isPastMinDistributionPeriod()` returns `true`, so the caller will still have to manually call `distribute()` before the can successfully call `mint()`. this is because of the hooks placed when minting and burning:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L303C1-L311C6
 ```solidity
    function _beforeMintOrBurn() internal view {
         if 
