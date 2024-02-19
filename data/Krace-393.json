@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "Any user has the ability to add a holder to `LiquidInfrastructureERC20.holders` by transferring zero tokens to a valid holder",
+  "issueId": 393,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/393"
+}
