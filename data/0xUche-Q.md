@@ -22,6 +22,8 @@ The `LiquidInfrastructureERC20::_beforeTokenTransfer` function, when called shou
 ```
 
 Since this function is set to virtual, it allows for an inherited contract to override the function and change its behavior. Also, the function should not be set to as override as it doesn't override any virtual function from parent/base contracts.
+## Tools Used
+Manual Review
 
 ## Impact: 
 Since the function can be overridden, and its behavior changed any inherited contract can add an address to the list of holders unauthorized. Anyone can override the function and then add an address to the list of holders to receive tokens.
