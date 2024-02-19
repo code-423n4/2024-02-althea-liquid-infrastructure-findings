@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "AgileJune",
+  "risk": "3",
+  "title": "LiquidInfrastructureNFT.sol::_withdrawBalancesTo() can be failed with tokens that don't correctly implement the latest EIP20 spec, like USDT",
+  "issueId": 402,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/402"
+}
