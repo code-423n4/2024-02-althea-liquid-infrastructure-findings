@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`addManagedNFT()` - Due to how the adding of new NFT contract instances works, can add same LI NFT contract address more than once to the `ManagedNFTs` array.",
+  "issueId": 745,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/745"
+}
