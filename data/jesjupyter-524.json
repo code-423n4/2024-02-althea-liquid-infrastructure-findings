@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "When a ManagedNFT is released, its balance is not withdrawn automatically",
+  "issueId": 524,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/524"
+}
