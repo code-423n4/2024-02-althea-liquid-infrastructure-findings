@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "mgf15",
+  "risk": "2",
+  "title": "whole transaction can fail if there erc20 had no return value",
+  "issueId": 514,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/514"
+}
