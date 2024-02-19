@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "sandy",
+  "risk": "2",
+  "title": "USDC blacklist can DoS the LiquidInfrastructureERC20.sol contract.",
+  "issueId": 678,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/678"
+}
