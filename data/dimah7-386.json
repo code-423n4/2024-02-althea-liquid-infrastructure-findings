@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "dimah7",
+  "risk": "2",
+  "title": "DoS with block gas limit risk if array is too large",
+  "issueId": 386,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/386"
+}
