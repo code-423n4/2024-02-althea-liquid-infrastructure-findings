@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xPluto",
+  "risk": "2",
+  "title": "The releaseManagedNFT( ) function in LiquidInfrastructureERC20 contract will never be reverted even if no NFT is removed",
+  "issueId": 423,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/423"
+}
