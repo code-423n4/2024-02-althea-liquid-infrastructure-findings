@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "AgileJune",
+  "risk": "3",
+  "title": "Token holders can't receive rewards via `LiquidInfrastructureERC20.sol::distribute()` if protocol-held ERC20's balance is less than LiquidInfrastructureERC20 total supply.",
+  "issueId": 403,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/403"
+}
