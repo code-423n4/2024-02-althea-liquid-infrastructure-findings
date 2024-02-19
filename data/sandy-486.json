@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "sandy",
+  "risk": "3",
+  "title": "Some holders may never receive ``ERC20s`` reward from the ``distribute()`` due to weird token behaviour.",
+  "issueId": 486,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/486"
+}
