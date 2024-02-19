@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "kgothatso",
+  "risk": "2",
+  "title": "Use safeMint instead of mint for ERC721",
+  "issueId": 758,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/758"
+}
