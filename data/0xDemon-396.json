@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xDemon",
+  "risk": "3",
+  "title": "All features on LiquidInfrastructureERC20 contract cannot be used because addManageFT() always fails",
+  "issueId": 396,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/396"
+}
