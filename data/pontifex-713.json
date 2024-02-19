@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "pontifex",
+  "risk": "3",
+  "title": "An approved holder with zero balance can be pushed to the `holders` array many times by anyone",
+  "issueId": 713,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/713"
+}
