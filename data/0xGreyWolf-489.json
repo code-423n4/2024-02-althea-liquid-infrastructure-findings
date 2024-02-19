@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xGreyWolf",
+  "risk": "3",
+  "title": "Missing access control in `LiquidInfrastructureERC20::distribute()` will cause DOS temporarily halting important operations such as transfers, mints and burns",
+  "issueId": 489,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/489"
+}
