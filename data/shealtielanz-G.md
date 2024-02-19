@@ -12,6 +12,7 @@
 # G-01 Reconstuct the `addManagedNFT()` to save gas by calling the function once to add multiple NFTs.
 ## Summary.
 The logic of `addManagedNFT()` allows the owner to only add one token to ManageNFTs in a call:
+https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L394C1-L403C6
 ```solidity
    function addManagedNFT(address nftContract) public onlyOwner {
         LiquidInfrastructureNFT nft = LiquidInfrastructureNFT(nftContract);
@@ -61,10 +62,10 @@ Reconstruct the `addManagedNFT()` to be able to add multiple tokens to the `Mana
 # G-02 Use modifiers instead of repeating checks in different functions.
 ## Summary.
 In `LiquidInfrastructureERC20` before most functions are called, it checks the value of `LockedForDistribution`, to enforce requirements before certain functions are called, some of those functions are:
-- `withdrawFromManagedNFTs()`
-- `_endDistribution()`
-- `_beginDistribution()`
-- `_beforeTokenTransfer()`
+- `withdrawFromManagedNFTs()` ~ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L359C1-L360C78
+- `_endDistribution()` ~ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L286C1-L290C11
+- `_beginDistribution()` ~ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L257C1-L261C11
+- `_beforeTokenTransfer()` ~ https://github.com/code-423n4/2024-02-althea-liquid-infrastructure/blob/bd6ee47162368e1999a0a5b8b17b701347cf9a7d/liquid-infrastructure/contracts/LiquidInfrastructureERC20.sol#L127C1-L132C69
 Instead of constant checks in the function modifiers can be used to check this, 
 > [!Tip]
 > Since `LockedForDistribution` is a boolean variable, 2 modifiers can be used to do those checks and then appended to the functions that require them appropriately.
