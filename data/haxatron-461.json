@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "ManagedNFT cannot be released due to large `ManagedNFTs` array size",
+  "issueId": 461,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/461"
+}
