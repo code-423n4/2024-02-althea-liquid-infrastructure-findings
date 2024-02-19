@@ -62,8 +62,6 @@ With just 3 contracts in scope, the call traces of the codebase are relatively s
 
 ![Call graph](https://rexjoseph.github.io/images/althea-call-graph.png)
 
-[Link to full diagrams](https://github.com/rexjoseph/images)
-
 
 ## 7. Some weak spots within the codebase and mitigations
  - Removal of zero-value holders - Currently if after you make a transfer to another holder, your balance drops to zero, you're no longer a holder but it doesn't check if the receiving holder's address has a non-zero value. It sets them up if they weren't previously regardless. Anyone can use this technique to inflate the holders array size.
