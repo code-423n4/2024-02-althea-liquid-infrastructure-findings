@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "Gosho",
+  "risk": "2",
+  "title": "Loop can cause DoS - out of gas error",
+  "issueId": 754,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/754"
+}
