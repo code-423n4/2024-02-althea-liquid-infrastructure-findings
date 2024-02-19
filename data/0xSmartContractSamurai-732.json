@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`LiquidInfrastructureERC20::distribute90` - Should have checks to ensure zero values for `entitlement` and/or `this.balanceOf(recipient)` are not processed, to rather skip over these cases via use of `continue;` and `break;` respectively.",
+  "issueId": 732,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/732"
+}
