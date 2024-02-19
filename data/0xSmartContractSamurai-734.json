@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`LiquidInfrastructureERC20::distribute()` - L195: Should use a `safeTransfer()` along with a require check instead due to the use of ERC20 `transfer()` which doesn't guarantee a boolean return value, therefore default `false` would skip the logic of this `if` statement, which would result in inaccurate values for the `receipts` array.",
+  "issueId": 734,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/734"
+}
