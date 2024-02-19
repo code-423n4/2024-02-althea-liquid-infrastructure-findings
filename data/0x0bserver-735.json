@@ -1,0 +1,8 @@
+{
+  "contest": 331,
+  "handle": "0x0bserver",
+  "risk": "3",
+  "title": "`Owner` can make changes in `distributableERC20s` while distribution is running",
+  "issueId": 735,
+  "issueUrl": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/735"
+}
