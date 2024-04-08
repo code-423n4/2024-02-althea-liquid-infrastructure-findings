@@ -1731,15 +1731,15 @@ The best solution is to implement a two step withdrawal process in which, the re
 DoS
 
 **[0xA5DF (judge) commented](https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/issues/58#issuecomment-1985723292):**
-> [01] - L<br>
-> [02] - R<br>
-> [03] - R<br>
-> [04] - R<br>
-> [05] - L<br>
-> [06] - L<br>
-> [07] - L<br>
-> [08] - R<br>
-> [09] - L
+> [01] - Low<br>
+> [02] - Refactor<br>
+> [03] - Refactor<br>
+> [04] - Refactor<br>
+> [05] - Low<br>
+> [06] - Low<br>
+> [07] - Low<br>
+> [08] - Refactor<br>
+> [09] - Low
 
 ***
 
